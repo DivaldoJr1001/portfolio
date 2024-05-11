@@ -6,6 +6,8 @@
 .info-header {
   display: flex;
   flex-direction: row;
+  margin: 1rem;
+  padding: 1rem;
 
   .picture-container {
     background-color: white;
@@ -33,6 +35,31 @@
     .info {
       font-size: 1.5rem;
       font-style: italic;
+    }
+  }
+}
+
+.info-body {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+
+  .summary-container {
+    display: flex;
+    font-size: 1.5rem;
+    padding: 1rem;
+    flex: 5;
+    align-items: center;
+  }
+
+  .nav-buttons-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 1rem;
+
+    app-menu-button:not(:last-of-type) {
+      margin-bottom: 1rem;
     }
   }
 }

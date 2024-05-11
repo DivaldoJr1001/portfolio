@@ -1,5 +1,8 @@
 @use "@angular/material" as mat;
+@import "./borders.scss";
+@import "./effects.scss";
 @import "./flex.scss";
+@import "./positioning.scss";
 @import "../theme/theme-variables.scss";
 
 html,
@@ -29,16 +32,4 @@ app-root {
 
 :root {
   --problem-background: rgba(255, 0, 0, 0.2);
-}
-
-.vertical-outer-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-}
-
-.centralized-content {
-  align-items: center;
-  justify-content: center;
 }

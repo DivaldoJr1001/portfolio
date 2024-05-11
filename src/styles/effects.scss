@@ -1,0 +1,20 @@
+.hover-glow-border {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover-glow-border:hover {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+}
+
+.hover-glow-text {
+    transition: text-shadow 0.3s ease;
+}
+
+.hover-glow-text:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.hover-glow {
+    @extend .hover-glow-border;
+    @extend .hover-glow-text;
+}

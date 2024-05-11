@@ -1,10 +1,24 @@
 <div class="vertical-outer-container">
-  <div class="info-header">
+  <div class="info-header corner-borders hover-glow-text" #infoHeader>
     <img class="picture-container" src="../../../assets/picture.jpg" alt="Profile Picture">
     <div class="data-container">
       <div class="name">{{name}}</div>
       <div class="info">{{ currentStrings['info1'] }}</div>
       <div class="info">{{ currentStrings['info2'] }}</div>
+    </div>
+  </div>
+
+  <div class="info-body" [style.width.px]="infoHeader.offsetWidth">
+    <div class="summary-container corner-borders hover-glow-text">
+      {{  currentStrings['summary'] }}
+    </div>
+
+    <div class="nav-buttons-container">
+      <app-menu-button [buttonText]="currentStrings['experience']"></app-menu-button>
+
+      <app-menu-button [buttonText]="currentStrings['academicHistory']"></app-menu-button>
+
+      <app-menu-button [buttonText]="currentStrings['skills']"></app-menu-button>
     </div>
   </div>
 </div>

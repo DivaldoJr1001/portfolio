@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { titlesBR, titlesUS } from 'src/app/shared/constants/page-titles';
 import { MultiLanguagePageComponent } from 'src/app/shared/extensions/multi-language-page.component';
 
 @Component({
@@ -12,13 +13,22 @@ export class MainPageComponent extends MultiLanguagePageComponent {
   override stringsBR: Record<string, string> = {
     footer: `Portfólio em Angular`,
     info1: `Desenvolvedor Full Stack desde 2019`,
-    info2: 'Bacharel em Ciência da Computação | Cursando MBA em Ciência de Dados'
+    info2: 'Bacharel em Ciência da Computação | Cursando MBA em Ciência de Dados',
+    summary: 'Como profissional, meu objetivo é interagir com uma grande variedade de tecnologias e ferramentas de forma a seguir a curva de avanços tecnológicos, sempre buscando novas técnicas para aprimorar minha eficiência na efetuação das mais variadas atividades.',
+    experience: titlesBR['experience'],
+    academicHistory: titlesBR['academicHistory'],
+    skills: titlesBR['skills']
+
   };
 
   override stringsUS: Record<string, string> = {
     footer: `Portfolio in Angular`,
     info1: `Full Stack Developer since 2019`,
-    info2: 'Bachelor in Data Science | MBA in Data Science in progress'
+    info2: 'Bachelor in Data Science | MBA in Data Science in progress',
+    summary: 'As a professional, my objective is to interact with a wide variety of technologies and tools in order to follow the curve of technological improvements, always searching for new techniques to improve my efficiency in carrying out the most varied tasks.',
+    experience: titlesUS['experience'],
+    academicHistory: titlesUS['academicHistory'],
+    skills: titlesUS['skills']
   };
 
   constructor() {

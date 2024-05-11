@@ -8,15 +8,20 @@ import {
 
 export const fadeAnimation = trigger('fadeAnimation', [
   transition('* => *', [
-    query(':enter', [style({ opacity: 0 })], { optional: true }),
     query(
-      ':leave',
-      [style({ opacity: 1 }), animate('0.6s', style({ opacity: 0 }))],
+      ':enter',
+      [
+        style({ opacity: 0 }),
+        animate('0.6s ease-in', style({ opacity: 1 }))
+      ],
       { optional: true }
     ),
     query(
-      ':enter',
-      [style({ opacity: 0 }), animate('0.6s', style({ opacity: 1 }))],
+      ':leave',
+      [
+        style({ opacity: 1 }),
+        animate('0.6s ease-in', style({ opacity: 0 }))
+      ],
       { optional: true }
     )
   ])

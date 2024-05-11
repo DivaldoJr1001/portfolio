@@ -1,5 +1,5 @@
 import { AfterViewInit, ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
-import { Subject, debounceTime, takeUntil } from 'rxjs';
+import { BehaviorSubject, Subject, debounceTime, takeUntil } from 'rxjs';
 import { LanguageService, Languages } from 'src/services/language.service';
 
 @Component({
@@ -14,6 +14,8 @@ export class MultiLanguagePageComponent implements AfterViewInit {
   stringsUS: Record<string, string> = {};
 
   currentStrings: Record<string, string> = {};
+
+  loaded$ = new BehaviorSubject<boolean>(false);
 
   _onDestroy = new Subject<void>();
 
@@ -37,5 +39,7 @@ export class MultiLanguagePageComponent implements AfterViewInit {
         this.cd.detectChanges();
       }
     });
+    this.loaded$.next(true);
+    this.cd.detectChanges();
   }
 }

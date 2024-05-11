@@ -1,0 +1,20 @@
+::ng-deep app-menu-button {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    border: solid 4px white;
+    border-radius: 1rem;
+    padding: 1rem;
+    flex: 1;
+    min-height: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: bold;
+}
