@@ -1,0 +1,35 @@
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  color: var(--primary-text) !important;
+
+  background-image: url('../assets/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .router-outlet-container {
+    flex: 1;
+  }
+
+  .footer {
+    display: flex;
+    height: 1rem;
+    padding: 1rem;
+    flex-direction: row;
+    align-items: center;
+    align-self: end;
+  }
+}
+
+.router-outlet-container {
+  width: 100vw;
+}
+
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}

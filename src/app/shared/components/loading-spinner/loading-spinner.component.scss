@@ -1,0 +1,16 @@
+::ng-deep app-loading-spinner {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  .mat-mdc-progress-spinner circle {
+    stroke: white;
+  }
+}
+
+.loading-spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}

@@ -1,0 +1,54 @@
+.flex {
+  display: flex;
+}
+
+.flex-fill {
+  display: flex;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.flex-fill-horizontal {
+  display: flex;
+  width: 100% !important;
+}
+
+.flex-fill-vertical {
+  display: flex;
+  height: 100% !important;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-size($size) {
+  display: flex;
+  flex: $size;
+}
+
+.f1 {
+  @include flex-size(1);
+}
+
+.f2 {
+  @include flex-size(2);
+}
+
+.f3 {
+  @include flex-size(3);
+}
+
+.f4 {
+  @include flex-size(4);
+}
+
+.f5 {
+  @include flex-size(5);
+}

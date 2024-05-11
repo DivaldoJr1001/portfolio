@@ -1,6 +1,8 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 16.1.0 e implementa a biblioteca Angular Material versão 16.2.4.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0 and implements the Angular Material library version 16.2.4.
 
 ## Development server
 

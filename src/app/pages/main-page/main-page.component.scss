@@ -1,0 +1,38 @@
+.vertical-outer-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.info-header {
+  display: flex;
+  flex-direction: row;
+
+  .picture-container {
+    background-color: white;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid white 0.5rem;
+  }
+
+  .data-container {
+    align-self: center;
+    height: 10rem;
+    align-content: center;
+    padding-right: 1rem;
+    margin-left: 1rem;
+
+    .name {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .info {
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+  }
+}
