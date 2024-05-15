@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { fadeAnimation } from './shared/constants/animations';
 import { MultiLanguagePageComponent } from './shared/extensions/multi-language-page.component';
+import { envVariables } from 'src/environment/environment';
 
 @Component({
   selector: 'app-root',
@@ -18,4 +19,14 @@ export class AppComponent extends MultiLanguagePageComponent {
   override stringsUS: Record<string, string> = {
     footer: `Portfolio in Angular`
   };
+
+  openGithub(): void {
+    const link = envVariables.githubLink;
+    window.open(link, "_blank");
+  }
+
+  openLinkedIn(): void {
+    const link = envVariables.linkedInLink;
+    window.open(link, "_blank");
+  }
 }

@@ -25,7 +25,7 @@ export class MainPageComponent extends MultiLanguagePageComponent {
   override stringsUS: Record<string, string> = {
     footer: `Portfolio in Angular`,
     info1: `Full Stack Developer since 2019`,
-    info2: 'Bachelor in Data Science | MBA in Data Science in progress',
+    info2: 'Bachelor of Computer Science | Pursuing an MBA in Data Science',
     location: 'Fortaleza, Ceará, Brazil',
     summary: 'As a professional, my objective is to interact with a wide variety of technologies and tools in order to follow the curve of technological improvements, always searching for new techniques to improve my efficiency in carrying out the most varied tasks.',
     experience: titlesUS['experience'],

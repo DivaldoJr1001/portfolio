@@ -1,5 +1,9 @@
-<div class="outer-container">
-  <div class="flag-container" [class.clickable]="currentLanguage.code !== languageObject.code" [class.selected]="currentLanguage.code === languageObject.code" *ngFor="let languageObject of languageObjects" [title]="languageObject.text[currentLanguage.code]" (click)="changeLanguage(languageObject)">
-    <img src="../../../../assets/flags/{{languageObject.code}}.svg" [alt]="languageObject.text[currentLanguage.code]">
+<div class="outer-container corner-borders">
+  <div>
+    {{ currentStrings['language'] }}: &nbsp;
+  </div>
+
+  <div class="flag-container" [class.clickable]="currentLanguage.code !== languageObject.code" [class.selected]="currentLanguage.code === languageObject.code" *ngFor="let languageObject of languageObjects" [title]="currentStrings[languageObject.code]" (click)="changeLanguage(languageObject)">
+    <img src="../../../../assets/flags/{{languageObject.code}}.svg" [alt]="currentStrings[languageObject.code]">
   </div>
 </div>
