@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class LanguageService {
-  private currentLanguage$: BehaviorSubject<number> = new BehaviorSubject<number>(Languages.BR);
+  private currentLanguage$: BehaviorSubject<number> = new BehaviorSubject<number>(Languages.PT);
 
   constructor() {
   }
@@ -20,6 +20,6 @@ export class LanguageService {
 }
 
 export enum Languages {
-  BR = 0,
-  US = 1
+  PT = 0,
+  EN = 1
 }

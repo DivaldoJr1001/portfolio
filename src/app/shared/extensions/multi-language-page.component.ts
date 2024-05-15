@@ -28,10 +28,10 @@ export class MultiLanguagePageComponent implements AfterViewInit {
       next: langIndex => {
 
         switch (langIndex) {
-          case Languages.BR:
+          case Languages.PT:
             this.currentStrings = this.stringsBR;
             break;
-          case Languages.US:
+          case Languages.EN:
             this.currentStrings = this.stringsUS;
             break;
         }

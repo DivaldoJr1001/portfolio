@@ -4,11 +4,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { MaterialModule } from '../material/material.module';
 import { MenuButtonComponent } from './menu-button/menu-button.component';
+import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 
 @NgModule({
   declarations: [
     LoadingSpinnerComponent,
-    MenuButtonComponent
+    MenuButtonComponent,
+    LanguageSelectorComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { MenuButtonComponent } from './menu-button/menu-button.component';
   ],
   exports: [
     LoadingSpinnerComponent,
-    MenuButtonComponent
+    MenuButtonComponent,
+    LanguageSelectorComponent
   ]
 })
 export class SharedComponentsModule { }
