@@ -1,15 +1,8 @@
-.outer-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
 .title-header {
   font-size: 2rem;
   font-weight: bold;
   padding: 1rem;
+  box-sizing: border-box;
   text-align: center;
 }
 
@@ -17,6 +10,7 @@
   margin-top: 1rem;
   overflow: auto;
   padding: 1rem;
+  box-sizing: border-box;
 
   .title {
     font-weight: bold;

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { fadeAnimation } from './shared/constants/animations';
-import { MultiLanguagePageComponent } from './shared/extensions/multi-language-page.component';
 import { envVariables } from 'src/environment/environment';
+import { MultiLanguagePageComponent } from './shared/extensions/multi-language-page.component';
+import { fadeAnimation } from './shared/constants/animations';
 
 @Component({
   selector: 'app-root',

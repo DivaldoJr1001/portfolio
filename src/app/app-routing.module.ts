@@ -11,11 +11,13 @@ export enum Paths {
 const routes: Routes = [
   {
     path: Paths.MAIN,
-    component: MainPageComponent
+    component: MainPageComponent,
+    data: { animation: 'MainPage' }
   },
   {
     path: Paths.PROFESSIONAL_HISTORY,
-    component: ProfessionalHistoryComponent
+    component: ProfessionalHistoryComponent,
+    data: { animation: 'WorkPage' }
   },
   {path: '**', redirectTo: Paths.MAIN, pathMatch: 'full'}
 ];
