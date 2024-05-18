@@ -7,11 +7,13 @@ import { LanguageService } from 'src/services/language.service';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedComponentsModule } from './shared/components/shared-components.module';
+import { ProfessionalHistoryComponent } from './pages/professional-history/professional-history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
+    MainPageComponent,
+    ProfessionalHistoryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,8 @@
-.vertical-outer-container {
-  align-items: center;
-  justify-content: center;
-}
-
 .info-header {
   display: flex;
   flex-direction: row;
-  margin: 1rem;
   padding: 1rem;
+  margin-bottom: 2rem;
 
   .picture-container {
     background-color: white;
@@ -42,7 +37,6 @@
 .info-body {
   display: flex;
   flex-direction: row;
-  margin-top: 1rem;
 
   .summary-container {
     display: flex;
@@ -58,7 +52,7 @@
     flex: 1;
     margin-left: 1rem;
 
-    app-menu-button:not(:last-of-type) {
+    app-nav-button:not(:last-of-type) {
       margin-bottom: 1rem;
     }
   }

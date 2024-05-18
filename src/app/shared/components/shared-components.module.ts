@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { MaterialModule } from '../material/material.module';
-import { MenuButtonComponent } from './menu-button/menu-button.component';
+import { NavButtonComponent } from './nav-button/nav-button.component';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 
 @NgModule({
   declarations: [
     LoadingSpinnerComponent,
-    MenuButtonComponent,
+    NavButtonComponent,
     LanguageSelectorComponent
   ],
   imports: [
@@ -19,7 +19,7 @@ import { LanguageSelectorComponent } from './language-selector/language-selector
   ],
   exports: [
     LoadingSpinnerComponent,
-    MenuButtonComponent,
+    NavButtonComponent,
     LanguageSelectorComponent
   ]
 })

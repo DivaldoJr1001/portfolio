@@ -1,0 +1,48 @@
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-header {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+}
+
+.work-history-container {
+  margin-top: 1rem;
+  overflow: auto;
+  padding: 1rem;
+
+  .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    .company {
+      text-decoration: underline;
+    }
+  }
+
+  .timespan {
+    font-weight: bold;
+  }
+
+  .timespan, .description {
+    margin-top: 1rem;
+  }
+}
+
+.work-history-item:not(:last-of-type) {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px white solid;
+}
+
+.return-button {
+  margin-top: 1rem;
+  width: 10rem;
+}

@@ -1,0 +1,23 @@
+<div class="outer-container">
+  <div class="centered-container">
+    <div class="title-header corner-borders hover-glow-text">
+      {{ currentStrings['title'] }}
+    </div>
+
+    <div class="work-history-container corner-borders">
+      <div class="work-history-item hover-glow-text" *ngFor="let item of workHistory">
+        <div class="title">
+          {{item[currentLanguageIndex].title}} - <span class="company">{{item[currentLanguageIndex].company}}</span>
+        </div>
+        <div class="timespan">
+          {{ item[currentLanguageIndex].startDate }} - {{ item[currentLanguageIndex].endDate || currentStrings['present'] }}
+        </div>
+        <div class="description">
+          {{item[currentLanguageIndex].description}}
+        </div>
+      </div>
+    </div>
+
+    <app-nav-button class="return-button" [buttonText]="currentStrings['return']" [routerLink]="'./professionalHistory'"></app-nav-button>
+  </div>
+</div>

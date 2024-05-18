@@ -1,24 +1,26 @@
-<div class="vertical-outer-container">
-  <div class="info-header corner-borders hover-glow-text" #infoHeader>
-    <div class="data-container">
-      <div class="name">{{name}}</div>
-      <div class="info">{{ currentStrings['info1'] }}</div>
-      <div class="info">{{ currentStrings['info2'] }}</div>
-      <div class="info">{{ currentStrings['location'] }}</div>
-    </div>
-  </div>
-
-  <div class="info-body" [style.width.px]="infoHeader.offsetWidth">
-    <div class="summary-container corner-borders hover-glow-text">
-      {{  currentStrings['summary'] }}
+<div class="outer-container">
+  <div class="centered-container">
+    <div class="info-header corner-borders hover-glow-text">
+      <div class="data-container">
+        <div class="name">{{name}}</div>
+        <div class="info">{{ currentStrings['info1'] }}</div>
+        <div class="info">{{ currentStrings['info2'] }}</div>
+        <div class="info">{{ currentStrings['location'] }}</div>
+      </div>
     </div>
 
-    <div class="nav-buttons-container">
-      <app-menu-button [buttonText]="currentStrings['experience']"></app-menu-button>
+    <div class="info-body">
+      <div class="summary-container corner-borders hover-glow-text">
+        {{  currentStrings['summary'] }}
+      </div>
 
-      <app-menu-button [buttonText]="currentStrings['academicHistory']"></app-menu-button>
+      <div class="nav-buttons-container">
+        <app-nav-button [buttonText]="currentStrings['experience']" [routerLink]="'./professionalHistory'"></app-nav-button>
 
-      <app-menu-button [buttonText]="currentStrings['skills']"></app-menu-button>
+        <app-nav-button [buttonText]="currentStrings['academicHistory']"></app-nav-button>
+
+        <app-nav-button [buttonText]="currentStrings['skills']"></app-nav-button>
+      </div>
     </div>
   </div>
 </div>

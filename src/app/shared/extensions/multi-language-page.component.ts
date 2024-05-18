@@ -14,6 +14,7 @@ export class MultiLanguagePageComponent implements AfterViewInit {
   stringsUS: Record<string, string> = {};
 
   currentStrings: Record<string, string> = {};
+  currentLanguageIndex = 0;
 
   loaded$ = new BehaviorSubject<boolean>(false);
 
@@ -23,16 +24,18 @@ export class MultiLanguagePageComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.currentStrings = this.stringsBR;
+    this.currentStrings =this.stringsBR;
+    this.currentLanguageIndex = Languages.PT;
     this.lang.getLanguageObservable().pipe(takeUntil(this._onDestroy)).subscribe({
       next: langIndex => {
-
         switch (langIndex) {
           case Languages.PT:
             this.currentStrings = this.stringsBR;
+            this.currentLanguageIndex = Languages.PT;
             break;
           case Languages.EN:
             this.currentStrings = this.stringsUS;
+            this.currentLanguageIndex = Languages.EN;
             break;
         }
 

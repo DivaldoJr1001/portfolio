@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { titlesBR, titlesUS } from 'src/app/shared/constants/page-titles';
+import { sharedStringsBR, sharedStringsUS } from 'src/app/shared/constants/shared-strings';
 import { MultiLanguagePageComponent } from 'src/app/shared/extensions/multi-language-page.component';
 
 @Component({
@@ -16,10 +16,9 @@ export class MainPageComponent extends MultiLanguagePageComponent {
     info2: 'Bacharel em Ciência da Computação | Cursando MBA em Ciência de Dados',
     location: 'Fortaleza, Ceará, Brasil',
     summary: 'Como profissional, meu objetivo é interagir com uma grande variedade de tecnologias e ferramentas de forma a seguir a curva de avanços tecnológicos, sempre buscando novas técnicas para aprimorar minha eficiência na efetuação das mais variadas atividades.',
-    experience: titlesBR['experience'],
-    academicHistory: titlesBR['academicHistory'],
-    skills: titlesBR['skills']
-
+    experience: sharedStringsBR['experience'],
+    academicHistory: sharedStringsBR['academicHistory'],
+    skills: sharedStringsBR['skills']
   };
 
   override stringsUS: Record<string, string> = {
@@ -28,9 +27,9 @@ export class MainPageComponent extends MultiLanguagePageComponent {
     info2: 'Bachelor of Computer Science | Pursuing an MBA in Data Science',
     location: 'Fortaleza, Ceará, Brazil',
     summary: 'As a professional, my objective is to interact with a wide variety of technologies and tools in order to follow the curve of technological improvements, always searching for new techniques to improve my efficiency in carrying out the most varied tasks.',
-    experience: titlesUS['experience'],
-    academicHistory: titlesUS['academicHistory'],
-    skills: titlesUS['skills']
+    experience: sharedStringsUS['experience'],
+    academicHistory: sharedStringsUS['academicHistory'],
+    skills: sharedStringsUS['skills']
   };
 
   constructor() {

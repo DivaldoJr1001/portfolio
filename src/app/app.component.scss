@@ -5,10 +5,14 @@
   width: 100%;
   color: var(--primary-text) !important;
 
-  background-image: url('../assets/bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: rgb(27, 27, 27);
+
+  // background-image: url('../assets/bg.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+
+  overflow: hidden;
 
   .router-outlet-container {
     flex: 1;
