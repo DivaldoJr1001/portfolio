@@ -6,6 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./nav-button.component.scss']
 })
 export class NavButtonComponent {
-  @Input() buttonText: string = ''
-
+  @Input() localizationString = '';
 }

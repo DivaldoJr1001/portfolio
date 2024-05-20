@@ -1,0 +1,14 @@
+{
+  "SHARED": {
+    "LANGUAGE": "Language",
+
+    "pt-BR": "Portuguese (Brazil)",
+    "en-US": "English (USA)",
+
+    "WORK_HISTORY": "Professional History",
+    "ACADEMIC_HISTORY": "Academic History",
+    "SKILLS": "Relevant Skills",
+
+    "RETURN_BUTTON": "Return"
+  }
+}

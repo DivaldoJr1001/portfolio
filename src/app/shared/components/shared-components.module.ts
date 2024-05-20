@@ -5,6 +5,7 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
 import { MaterialModule } from '../material/material.module';
 import { NavButtonComponent } from './nav-button/nav-button.component';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LanguageSelectorComponent } from './language-selector/language-selector
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    TranslateModule
   ],
   exports: [
     LoadingSpinnerComponent,

@@ -2,24 +2,24 @@
   <div class="centered-container">
     <div class="info-header corner-borders hover-glow-text">
       <div class="data-container">
-        <div class="name">{{name}}</div>
-        <div class="info">{{ currentStrings['info1'] }}</div>
-        <div class="info">{{ currentStrings['info2'] }}</div>
-        <div class="info">{{ currentStrings['location'] }}</div>
+        <div class="name">{{ 'MAIN_PAGE.NAME' | translate }}</div>
+        <div class="info">{{ 'MAIN_PAGE.ROLE' | translate }}</div>
+        <div class="info">{{ 'MAIN_PAGE.CERTIFICATIONS' | translate }}</div>
+        <div class="info">{{ 'MAIN_PAGE.LOCATION' | translate }}</div>
       </div>
     </div>
 
     <div class="info-body">
       <div class="summary-container corner-borders hover-glow-text">
-        {{  currentStrings['summary'] }}
+        {{ 'MAIN_PAGE.SUMMARY' | translate }}
       </div>
 
       <div class="nav-buttons-container">
-        <app-nav-button [buttonText]="currentStrings['experience']" [routerLink]="'./professionalHistory'"></app-nav-button>
+        <app-nav-button localizationString="SHARED.WORK_HISTORY" [routerLink]="'./professionalHistory'"></app-nav-button>
 
-        <app-nav-button [buttonText]="currentStrings['academicHistory']"></app-nav-button>
+        <app-nav-button localizationString="SHARED.ACADEMIC_HISTORY"></app-nav-button>
 
-        <app-nav-button [buttonText]="currentStrings['skills']"></app-nav-button>
+        <app-nav-button localizationString="SHARED.SKILLS"></app-nav-button>
       </div>
     </div>
   </div>

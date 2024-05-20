@@ -1,13 +1,23 @@
+import {HttpClientModule, HttpBackend} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { LanguageService } from 'src/services/language.service';
-import { MainPageComponent } from './pages/main-page/main-page.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SharedComponentsModule } from './shared/components/shared-components.module';
+import { AppComponent } from './app.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
 import { ProfessionalHistoryComponent } from './pages/professional-history/professional-history.component';
+import { SharedComponentsModule } from './shared/components/shared-components.module';
+
+export function HttpLoaderFactory(_httpBackend: HttpBackend) {
+  return new MultiTranslateHttpLoader(_httpBackend, [
+    '/assets/i18n/',
+    '/assets/i18n/pages/main-page/',
+    '/assets/i18n/pages/professional-history/'
+  ]);
+}
 
 @NgModule({
   declarations: [
@@ -19,7 +29,16 @@ import { ProfessionalHistoryComponent } from './pages/professional-history/profe
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpBackend]
+      },
+      defaultLanguage: 'pt-BR'
+    })
   ],
   providers: [LanguageService],
   bootstrap: [AppComponent]

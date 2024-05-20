@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ProfessionalHistoryComponent } from './professional-history.component';
 
 describe('ProfessionalHistoryComponent', () => {

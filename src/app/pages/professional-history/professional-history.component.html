@@ -1,23 +1,23 @@
 <div class="outer-container">
   <div class="centered-container">
     <div class="title-header corner-borders hover-glow-text">
-      {{ currentStrings['title'] }}
+      {{ 'SHARED.WORK_HISTORY' | translate }}
     </div>
 
     <div class="work-history-container corner-borders">
       <div class="work-history-item hover-glow-text" *ngFor="let item of workHistory">
         <div class="title">
-          {{item[currentLanguageIndex].title}} - <span class="company">{{item[currentLanguageIndex].company}}</span>
+          {{item[currentLanguage].title}} - <span class="company">{{item[currentLanguage].company}}</span>
         </div>
         <div class="timespan">
-          {{ item[currentLanguageIndex].startDate }} - {{ item[currentLanguageIndex].endDate || currentStrings['present'] }}
+          {{ item[currentLanguage].startDate }} - {{ item[currentLanguage].endDate || ('PROFESSIONAL_HISTORY.PRESENT' | translate) }}
         </div>
         <div class="description">
-          {{item[currentLanguageIndex].description}}
+          {{item[currentLanguage].description}}
         </div>
       </div>
     </div>
 
-    <app-nav-button class="return-button" [buttonText]="currentStrings['return']" [routerLink]="'./professionalHistory'"></app-nav-button>
+    <app-nav-button class="return-button" localizationString="SHARED.RETURN_BUTTON" [routerLink]="'./professionalHistory'"></app-nav-button>
   </div>
 </div>

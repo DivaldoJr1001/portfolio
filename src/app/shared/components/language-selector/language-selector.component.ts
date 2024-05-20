@@ -1,43 +1,28 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { LanguageService, Languages } from 'src/services/language.service';
-import { MultiLanguagePageComponent } from '../../extensions/multi-language-page.component';
+import { TranslateService } from '@ngx-translate/core';
+import { Languages } from 'src/services/language.service';
 
 @Component({
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss']
 })
-export class LanguageSelectorComponent extends MultiLanguagePageComponent implements OnInit {
+export class LanguageSelectorComponent implements OnInit {
 
-  override stringsBR: Record<string, string> = {
-    language: 'Linguagem',
-    PT: `Português`,
-    EN: `Inglês`
-  };
-
-  override stringsUS: Record<string, string> = {
-    language: 'Language',
-    PT: `Portuguese`,
-    EN: `English`
-  };
+  constructor(
+    protected translate: TranslateService,
+    protected cd: ChangeDetectorRef
+  ) {}
 
   currentLanguage!: LanguageObject;
 
   languageObjects: LanguageObject[] = [
     {
-      text: {
-        'PT': 'Português',
-        'EN': 'Portuguese'
-      },
-      code: 'PT',
+      code: 'pt-BR',
       index: Languages.PT
     },
     {
-      text: {
-        'PT': 'Inglês',
-        'EN': 'English'
-      },
-      code: 'EN',
+      code: 'en-US',
       index: Languages.EN
     }
   ];
@@ -48,16 +33,14 @@ export class LanguageSelectorComponent extends MultiLanguagePageComponent implem
   }
 
   changeLanguage(langObj: LanguageObject): void {
-    if (this.currentLanguage.code !== langObj.code) {
+    if (langObj.code !== this.translate.currentLang) {
+      this.translate.use(langObj.code);
       this.currentLanguage = langObj;
-      this.lang.updateLanguage(langObj.index);
-      this.cd.detectChanges();
     }
   }
 }
 
 export interface LanguageObject {
-  text: { [key: string]: string },
   code: string,
   index: number
 }

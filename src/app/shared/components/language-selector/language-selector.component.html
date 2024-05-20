@@ -1,9 +1,9 @@
 <div class="outer-container corner-borders">
   <div>
-    {{ currentStrings['language'] }}: &nbsp;
+    {{ 'SHARED.LANGUAGE' | translate }}: &nbsp;
   </div>
 
-  <div class="flag-container" [class.clickable]="currentLanguage.code !== languageObject.code" [class.selected]="currentLanguage.code === languageObject.code" *ngFor="let languageObject of languageObjects" [title]="currentStrings[languageObject.code]" (click)="changeLanguage(languageObject)">
-    <img src="../../../../assets/flags/{{languageObject.code}}.svg" [alt]="currentStrings[languageObject.code]">
+  <div class="flag-container" [class.clickable]="currentLanguage.code !== languageObject.code" [class.selected]="currentLanguage.code === languageObject.code" *ngFor="let languageObject of languageObjects" title="{{ 'SHARED.' + languageObject.code | translate }}" (click)="changeLanguage(languageObject)">
+    <img src="../../../../assets/flags/{{languageObject.code}}.svg" alt="{{ 'SHARED.' + languageObject.code | translate }}">
   </div>
 </div>
