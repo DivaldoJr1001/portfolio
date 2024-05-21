@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { CareerHistoryComponent } from './pages/career-history/career-history.component';
 import { SharedComponentsModule } from './shared/components/shared-components.module';
+import { AcademicHistoryComponent } from './pages/academic-history/academic-history.component';
 
 export function HttpLoaderFactory(_httpBackend: HttpBackend) {
   return new MultiTranslateHttpLoader(_httpBackend, [
     '/assets/i18n/',
     '/assets/i18n/pages/main-page/',
-    '/assets/i18n/pages/career-history/'
+    '/assets/i18n/pages/career-history/',
+    '/assets/i18n/pages/academic-history/'
   ]);
 }
 
@@ -23,7 +25,8 @@ export function HttpLoaderFactory(_httpBackend: HttpBackend) {
   declarations: [
     AppComponent,
     MainPageComponent,
-    CareerHistoryComponent
+    CareerHistoryComponent,
+    AcademicHistoryComponent
   ],
   imports: [
     BrowserModule,

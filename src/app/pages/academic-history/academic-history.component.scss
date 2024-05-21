@@ -1,0 +1,46 @@
+.title-header {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.academic-history-container {
+  overflow: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    .institute {
+      text-decoration: underline;
+    }
+  }
+
+  .timespan {
+    font-weight: bold;
+  }
+
+  .timespan, .description {
+    margin-top: 1rem;
+  }
+
+  .description {
+    white-space: pre-wrap;
+  }
+}
+
+.academic-history-item:not(:last-of-type) {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px white solid;
+}
+
+.return-button {
+  margin-top: 1rem;
+  width: 10rem;
+}

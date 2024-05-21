@@ -1,0 +1,21 @@
+<div class="outer-container">
+  <div class="centered-container">
+    <div class="title-header corner-borders hover-glow-text">
+      {{ 'ACADEMIC_HISTORY.TITLE' | translate }}
+    </div>
+
+    <div class="academic-history-container corner-borders">
+      <div class="academic-history-item hover-glow-text" *ngFor="let item of academicHistory">
+        <div class="title">
+          <span class="bold">{{item[currentLanguage].title}}</span> - <span class="institute" [class.clickable]="!!item[currentLanguage].instituteURL" (click)="openLink(item[currentLanguage].instituteURL || '')">{{item[currentLanguage].institute}}</span>
+        </div>
+        <div class="timespan">
+          {{ item[currentLanguage].startDate }} - {{ item[currentLanguage].endDate || ('ACADEMIC_HISTORY.PRESENT' | translate) }}
+        </div>
+        <div class="description">{{item[currentLanguage].description}}</div>
+      </div>
+    </div>
+
+    <app-nav-button class="return-button" localizationString="SHARED.RETURN_BUTTON" [routerUrl]="'./..'"></app-nav-button>
+  </div>
+</div>
