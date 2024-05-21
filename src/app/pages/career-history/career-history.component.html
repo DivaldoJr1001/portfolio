@@ -1,7 +1,7 @@
 <div class="outer-container">
   <div class="centered-container">
     <div class="title-header corner-borders hover-glow-text">
-      {{ 'SHARED.WORK_HISTORY' | translate }}
+      {{ 'SHARED.CAREER_HISTORY' | translate }}
     </div>
 
     <div class="work-history-container corner-borders">
@@ -10,7 +10,7 @@
           {{item[currentLanguage].title}} - <span class="company">{{item[currentLanguage].company}}</span>
         </div>
         <div class="timespan">
-          {{ item[currentLanguage].startDate }} - {{ item[currentLanguage].endDate || ('PROFESSIONAL_HISTORY.PRESENT' | translate) }}
+          {{ item[currentLanguage].startDate }} - {{ item[currentLanguage].endDate || ('CAREER_HISTORY.PRESENT' | translate) }}
         </div>
         <div class="description">
           {{item[currentLanguage].description}}
@@ -18,6 +18,6 @@
       </div>
     </div>
 
-    <app-nav-button class="return-button" localizationString="SHARED.RETURN_BUTTON" [routerLink]="'./professionalHistory'"></app-nav-button>
+    <app-nav-button class="return-button" localizationString="SHARED.RETURN_BUTTON" [routerUrl]="'./..'"></app-nav-button>
   </div>
 </div>

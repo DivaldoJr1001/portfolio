@@ -1,16 +1,13 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { takeUntil } from 'rxjs';
-import { DestroyEventNoticeComponent } from 'src/app/shared/extensions/destroy-event-notice.component';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CurrentLanguageChecker } from 'src/app/shared/extensions/current-language-checker.component';
 
 @Component({
-  selector: 'app-professional-history',
-  templateUrl: './professional-history.component.html',
-  styleUrls: ['./professional-history.component.scss']
+  selector: 'app-career-history',
+  templateUrl: './career-history.component.html',
+  styleUrls: ['./career-history.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProfessionalHistoryComponent extends DestroyEventNoticeComponent implements OnInit {
-  currentLanguage: string = 'pt-BR';
-
+export class CareerHistoryComponent extends CurrentLanguageChecker {
   workHistory: Record<any, WorkItemObject>[] = [
     {
       'pt-BR': {
@@ -43,24 +40,6 @@ export class ProfessionalHistoryComponent extends DestroyEventNoticeComponent im
       },
     },
   ];
-
-  constructor(
-    protected translate: TranslateService,
-    protected cd: ChangeDetectorRef
-  ) {
-    super();
-  };
-
-  ngOnInit(): void {
-    this.currentLanguage = this.translate.defaultLang;
-
-    this.translate.onLangChange.pipe(takeUntil(this._onDestroy)).subscribe({
-      next: langObj => {
-        this.currentLanguage = langObj.lang;
-        this.cd.detectChanges();
-      }
-    });
-  }
 }
 
 interface WorkItemObject {

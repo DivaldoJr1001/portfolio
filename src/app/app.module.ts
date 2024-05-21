@@ -8,14 +8,14 @@ import { LanguageService } from 'src/services/language.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
-import { ProfessionalHistoryComponent } from './pages/professional-history/professional-history.component';
+import { CareerHistoryComponent } from './pages/career-history/career-history.component';
 import { SharedComponentsModule } from './shared/components/shared-components.module';
 
 export function HttpLoaderFactory(_httpBackend: HttpBackend) {
   return new MultiTranslateHttpLoader(_httpBackend, [
     '/assets/i18n/',
     '/assets/i18n/pages/main-page/',
-    '/assets/i18n/pages/professional-history/'
+    '/assets/i18n/pages/career-history/'
   ]);
 }
 
@@ -23,7 +23,7 @@ export function HttpLoaderFactory(_httpBackend: HttpBackend) {
   declarations: [
     AppComponent,
     MainPageComponent,
-    ProfessionalHistoryComponent
+    CareerHistoryComponent
   ],
   imports: [
     BrowserModule,

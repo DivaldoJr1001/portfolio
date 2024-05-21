@@ -3,7 +3,7 @@
     {{ 'SHARED.LANGUAGE' | translate }}: &nbsp;
   </div>
 
-  <div class="flag-container" [class.clickable]="currentLanguage.code !== languageObject.code" [class.selected]="currentLanguage.code === languageObject.code" *ngFor="let languageObject of languageObjects" title="{{ 'SHARED.' + languageObject.code | translate }}" (click)="changeLanguage(languageObject)">
-    <img src="../../../../assets/flags/{{languageObject.code}}.svg" alt="{{ 'SHARED.' + languageObject.code | translate }}">
+  <div class="flag-container" *ngFor="let lang of languages" [class.clickable]="currentLanguage !== lang" [class.selected]="currentLanguage === lang"  title="{{ 'SHARED.' + lang | translate }}" (click)="currentLanguage !== lang ? changeLanguage(lang) : undefined">
+    <img src="../../../../assets/flags/{{lang}}.svg" alt="{{ 'SHARED.' + lang | translate }}">
   </div>
 </div>

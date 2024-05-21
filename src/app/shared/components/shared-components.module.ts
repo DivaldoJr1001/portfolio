@@ -6,6 +6,7 @@ import { MaterialModule } from '../material/material.module';
 import { NavButtonComponent } from './nav-button/nav-button.component';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     ReactiveFormsModule,
     MaterialModule,
-    TranslateModule
+    TranslateModule,
+    RouterModule
   ],
   exports: [
     LoadingSpinnerComponent,

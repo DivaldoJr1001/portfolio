@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { takeUntil } from 'rxjs';
 import { envVariables } from 'src/environment/environment';
 import { fadeAnimation } from './shared/constants/animations';
+import { DestroyEventNoticeComponent } from './shared/extensions/destroy-event-notice.component';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +12,46 @@ import { fadeAnimation } from './shared/constants/animations';
   styleUrls: ['./app.component.scss'],
   animations: [fadeAnimation]
 })
-export class AppComponent {
+export class AppComponent extends DestroyEventNoticeComponent implements OnInit {
   title = 'portfolio'
+
+  constructor(
+    protected translate: TranslateService,
+    protected router: Router,
+    protected activatedRoute: ActivatedRoute
+  ) {
+    translate.addLangs(['pt-BR', 'en-US']);
+    super();
+  }
+
+  ngOnInit(): void {
+    this.router.events.pipe(takeUntil(this._onDestroy)).subscribe({
+      next: (event) => {
+        if (event instanceof NavigationEnd) {
+          const availableLanguages = this.translate.getLangs();
+
+          const language = this.activatedRoute.snapshot.queryParamMap.get('l') || '';
+
+          if (!availableLanguages.includes(language)) {
+            this.translate.use(this.translate.defaultLang);
+          } else if (language !== this.translate.currentLang) {
+            this.translate.use(language);
+          }
+        }
+      }
+    });
+
+    this.translate.onLangChange.pipe(takeUntil(this._onDestroy)).subscribe({
+      next: langObj => {
+        const urlParts = this.router.url.split('?l=');
+
+        if (urlParts.length > 1) {
+          const newUrl = urlParts[0] + `?l=${langObj.lang}`;
+          this.router.navigateByUrl(newUrl);
+        }
+      }
+    });
+  }
 
   openGithub(): void {
     const link = envVariables.githubLink;
