@@ -10,16 +10,12 @@
     </div>
 
     <div class="info-body">
-      <div class="summary-container corner-borders hover-glow-text">
-        {{ 'MAIN_PAGE.SUMMARY' | translate }}
-      </div>
+      <div class="summary-container corner-borders hover-glow-text">{{'MAIN_PAGE.SUMMARY' | translate}}</div>
 
       <div class="nav-buttons-container">
-        <app-nav-button localizationString="SHARED.CAREER_HISTORY" [routerUrl]="'./careerHistory'"></app-nav-button>
+        <app-nav-button localizationString="CAREER_HISTORY.TITLE" [routerUrl]="'./careerHistory'"></app-nav-button>
 
-        <app-nav-button localizationString="SHARED.ACADEMIC_HISTORY"></app-nav-button>
-
-        <app-nav-button localizationString="SHARED.SKILLS"></app-nav-button>
+        <app-nav-button localizationString="ACADEMIC_HISTORY.TITLE" [routerUrl]="'./academicHistory'"></app-nav-button>
       </div>
     </div>
   </div>

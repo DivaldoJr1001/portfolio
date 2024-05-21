@@ -46,6 +46,7 @@
     box-sizing: border-box;
     flex: 5;
     align-items: center;
+    white-space: pre-wrap;
   }
 
   .nav-buttons-container {
@@ -53,6 +54,7 @@
     flex-direction: column;
     flex: 1;
     margin-left: 1rem;
+    justify-content: space-evenly;
 
     app-nav-button:not(:last-of-type) {
       margin-bottom: 1rem;

@@ -37,9 +37,15 @@ export class CareerHistoryComponent extends CurrentLanguageChecker {
         startDate: 'July/2019',
         endDate: 'April/2023',
         description: 'Front-end development of a desktop web application using Angular, including creating screens following pre-defined web designs, connecting front-end to API endpoints in the back-end, implementing functionalities for formatting and utilizing data received from endpoints, and creation of unit tests.'
-      },
-    },
+      }
+    }
   ];
+
+  openLink(link: string): void {
+    if (link) {
+      window.open(link, "_blank");
+    }
+  }
 }
 
 interface WorkItemObject {

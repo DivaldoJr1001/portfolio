@@ -1,20 +1,18 @@
 <div class="outer-container">
   <div class="centered-container">
     <div class="title-header corner-borders hover-glow-text">
-      {{ 'SHARED.CAREER_HISTORY' | translate }}
+      {{ 'CAREER_HISTORY.TITLE' | translate }}
     </div>
 
     <div class="work-history-container corner-borders">
       <div class="work-history-item hover-glow-text" *ngFor="let item of workHistory">
         <div class="title">
-          {{item[currentLanguage].title}} - <span class="company">{{item[currentLanguage].company}}</span>
+          <span class="bold">{{item[currentLanguage].title}}</span> - <span class="company"  [class.clickable]="!!item[currentLanguage].companyURL" (click)="openLink(item[currentLanguage].companyURL || '')">{{item[currentLanguage].company}}</span>
         </div>
         <div class="timespan">
           {{ item[currentLanguage].startDate }} - {{ item[currentLanguage].endDate || ('CAREER_HISTORY.PRESENT' | translate) }}
         </div>
-        <div class="description">
-          {{item[currentLanguage].description}}
-        </div>
+        <div class="description">{{item[currentLanguage].description}}</div>
       </div>
     </div>
 
