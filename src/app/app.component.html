@@ -6,9 +6,11 @@
     <app-language-selector ></app-language-selector>
   </div>
 
-  <div class="router-outlet-container" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+  <div class="router-outlet-container" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" *ngIf="!loadingRouteConfig">
     <router-outlet #o="outlet"></router-outlet>
   </div>
+
+  <app-loading-spinner *ngIf="loadingRouteConfig"></app-loading-spinner>
 
   <div class="footer">
     @2024 divaldojr.vercel.app
