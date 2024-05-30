@@ -55,10 +55,11 @@
     flex-direction: column;
     flex: 1;
     margin-left: 1rem;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     app-nav-button {
       width: 12rem;
+      flex: 1;
     }
 
     app-nav-button:not(:last-of-type) {
