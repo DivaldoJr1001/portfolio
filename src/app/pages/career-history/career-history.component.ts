@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Paths } from 'src/app/app-routing.module';
 import { CurrentLanguageChecker } from 'src/app/shared/extensions/current-language-checker.component';
 
 @Component({
@@ -8,6 +9,8 @@ import { CurrentLanguageChecker } from 'src/app/shared/extensions/current-langua
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CareerHistoryComponent extends CurrentLanguageChecker {
+  paths = Paths;
+
   workHistory: Record<any, WorkItemObject>[] = [
     {
       'pt-BR': {

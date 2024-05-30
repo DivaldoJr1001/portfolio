@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavButtonComponent } from './nav-button.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
-
-
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     TranslateModule,
-    RouterModule
+    RouterModule,
+    MatIconModule
   ],
   exports: [
     NavButtonComponent

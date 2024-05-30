@@ -1,0 +1,26 @@
+.nav-footer-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.movement-buttons-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.single-button-spacing {
+  justify-content: flex-end !important;
+}
+
+.return-button {
+  z-index: 10;
+}
+
+app-nav-button {
+  min-width: 12rem;
+}
