@@ -1,4 +1,4 @@
-import {HttpClientModule, HttpBackend} from '@angular/common/http';
+import { HttpBackend, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -7,10 +7,8 @@ import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { LanguageService } from 'src/services/language.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainPageComponent } from './pages/main-page/main-page.component';
-import { CareerHistoryComponent } from './pages/career-history/career-history.component';
-import { SharedComponentsModule } from './shared/components/shared-components.module';
-import { AcademicHistoryComponent } from './pages/academic-history/academic-history.component';
+import { NavButtonModule } from './shared/components/nav-button/nav-button.module';
+import { LanguageSelectorModule } from './shared/components/language-selector/language-selector.module';
 
 export function HttpLoaderFactory(_httpBackend: HttpBackend) {
   return new MultiTranslateHttpLoader(_httpBackend, [
@@ -23,17 +21,15 @@ export function HttpLoaderFactory(_httpBackend: HttpBackend) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MainPageComponent,
-    CareerHistoryComponent,
-    AcademicHistoryComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    SharedComponentsModule,
     HttpClientModule,
+    NavButtonModule,
+    LanguageSelectorModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

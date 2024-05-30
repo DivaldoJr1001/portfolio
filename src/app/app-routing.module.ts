@@ -13,18 +13,16 @@ export enum Paths {
 const routes: Routes = [
   {
     path: Paths.MAIN,
-    component: MainPageComponent,
-    data: { animation: 'MainPage' }
+    loadChildren: () => import('./pages/main-page/main-page.module').then((m) => m.MainPageModule)
+
   },
   {
     path: Paths.CAREER_HISTORY,
-    component: CareerHistoryComponent,
-    data: { animation: 'CareerPage' }
+    loadChildren: () => import('./pages/career-history/career-history.module').then((m) => m.CareerHistoryModule)
   },
   {
     path: Paths.ACADEMIC_HISTORY,
-    component: AcademicHistoryComponent,
-    data: { animation: 'AcademicPage' }
+    loadChildren: () => import('./pages/academic-history/academic-history.module').then((m) => m.AcademicHistoryModule)
   },
   {path: '**', redirectTo: Paths.MAIN, pathMatch: 'full'},
 ];
