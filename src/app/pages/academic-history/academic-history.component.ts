@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { Paths } from 'src/app/app-routing.module';
 import { HistoryPage } from 'src/app/shared/abstract-sources/history-page.component';
 
@@ -11,8 +10,6 @@ import { HistoryPage } from 'src/app/shared/abstract-sources/history-page.compon
 })
 export class AcademicHistoryComponent extends HistoryPage {
   paths = Paths;
-
-  certificatePath = './../../../assets/certificates/';
 
   academicHistory: Record<any, AcademicItemObject>[] = [
     {
@@ -41,7 +38,7 @@ export class AcademicHistoryComponent extends HistoryPage {
         description: 'Curso voltado ao aprendizado de ferramentas de infraestrutura de software, sistemas de computação, métodos, teorias, linguagens e modelos, além de resolução de problemas que tenham solução algorítmica e desenvolvimento de sistemas e projetos de qualquer natureza computacional com equipes de diferentes perfis.',
         startDate: 'Janeiro/2019',
         endDate: 'Dezembro/2023',
-        certificate: 'Diploma - Bacharelado de Ciência da Computação.jpg'
+        certificate: 'https://imgur.com/a/MweFo8c'
       },
       'en-US': {
         title: 'Bachelor in Computer Science ',
@@ -50,16 +47,10 @@ export class AcademicHistoryComponent extends HistoryPage {
         description: 'Course aimed at learning about software infrastructure tools, computer systems, methods, theories, languages and models, as well as solving problems with algorithmic solutions and developing systems and projects of any computational nature with teams of different profiles.',
         startDate: 'January/2019',
         endDate: 'December/2023',
-        certificate: 'Diploma - Bacharelado de Ciência da Computação.jpg'
+        certificate: 'https://imgur.com/a/MweFo8c'
       }
     }
   ];
-
-  constructor(
-    protected override matDialog: MatDialog
-  ) {
-    super();
-  }
 }
 
 interface AcademicItemObject {
