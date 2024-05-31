@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Paths } from 'src/app/app-routing.module';
-import { CurrentLanguageChecker } from 'src/app/shared/extensions/current-language-checker.component';
+import { HistoryPage } from 'src/app/shared/abstract-sources/history-page.component';
 
 @Component({
   selector: 'app-career-history',
@@ -8,7 +8,7 @@ import { CurrentLanguageChecker } from 'src/app/shared/extensions/current-langua
   styleUrls: ['./career-history.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CareerHistoryComponent extends CurrentLanguageChecker {
+export class CareerHistoryComponent extends HistoryPage {
   paths = Paths;
 
   workHistory: Record<any, WorkItemObject>[] = [
@@ -47,12 +47,6 @@ export class CareerHistoryComponent extends CurrentLanguageChecker {
       }
     }
   ];
-
-  openLink(link: string): void {
-    if (link) {
-      window.open(link, "_blank");
-    }
-  }
 }
 
 interface WorkItemObject {

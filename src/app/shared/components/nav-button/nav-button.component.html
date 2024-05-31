@@ -1,4 +1,4 @@
-<div class="button-container hover-glow" [routerLink]="routerUrl" [queryParamsHandling]="'preserve'">
+<div class="button-container hover-glow" [routerLink]="disableRouting ? undefined : routerUrl" [queryParamsHandling]="'preserve'">
     <mat-icon class="icon-before" *ngIf="matIconBefore"> {{ matIconBefore }} </mat-icon>
     <span>{{ localizationString | translate }}</span>
     <mat-icon class="icon-after" *ngIf="matIconAfter"> {{ matIconAfter }} </mat-icon>

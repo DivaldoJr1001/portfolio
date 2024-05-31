@@ -13,6 +13,10 @@
           {{ item[currentLanguage].startDate }} - {{ item[currentLanguage].endDate || ('ACADEMIC_HISTORY.PRESENT' | translate) }}
         </div>
         <div class="description">{{item[currentLanguage].description}}</div>
+
+        <div class="certificate-button" *ngIf="item[currentLanguage].certificate">
+          <app-nav-button localizationString="SHARED.CERTIFICATE" [disableRouting]="true" (click)="openImage(certificatePath + item[currentLanguage].certificate!)"></app-nav-button>
+        </div>
       </div>
     </div>
 

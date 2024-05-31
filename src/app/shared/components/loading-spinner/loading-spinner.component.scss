@@ -3,8 +3,12 @@
   height: 100%;
   width: 100%;
 
-  .mat-mdc-progress-spinner circle {
+  .white-spinner .mat-mdc-progress-spinner circle {
     stroke: white;
+  }
+
+  .black-spinner .mat-mdc-progress-spinner circle {
+    stroke: black;
   }
 }
 

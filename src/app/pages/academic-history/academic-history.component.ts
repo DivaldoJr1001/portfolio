@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Paths } from 'src/app/app-routing.module';
-import { CurrentLanguageChecker } from 'src/app/shared/extensions/current-language-checker.component';
+import { HistoryPage } from 'src/app/shared/abstract-sources/history-page.component';
 
 @Component({
   selector: 'app-academic-history',
@@ -8,8 +9,10 @@ import { CurrentLanguageChecker } from 'src/app/shared/extensions/current-langua
   styleUrls: ['./academic-history.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AcademicHistoryComponent extends CurrentLanguageChecker {
+export class AcademicHistoryComponent extends HistoryPage {
   paths = Paths;
+
+  certificatePath = './../../../assets/certificates/';
 
   academicHistory: Record<any, AcademicItemObject>[] = [
     {
@@ -37,7 +40,8 @@ export class AcademicHistoryComponent extends CurrentLanguageChecker {
         instituteURL: 'https://unifor.br/',
         description: 'Curso voltado ao aprendizado de ferramentas de infraestrutura de software, sistemas de computação, métodos, teorias, linguagens e modelos, além de resolução de problemas que tenham solução algorítmica e desenvolvimento de sistemas e projetos de qualquer natureza computacional com equipes de diferentes perfis.',
         startDate: 'Janeiro/2019',
-        endDate: 'Dezembro/2023'
+        endDate: 'Dezembro/2023',
+        certificate: 'Diploma - Bacharelado de Ciência da Computação.jpg'
       },
       'en-US': {
         title: 'Bachelor in Computer Science ',
@@ -45,15 +49,16 @@ export class AcademicHistoryComponent extends CurrentLanguageChecker {
         instituteURL: 'https://unifor.br/',
         description: 'Course aimed at learning about software infrastructure tools, computer systems, methods, theories, languages and models, as well as solving problems with algorithmic solutions and developing systems and projects of any computational nature with teams of different profiles.',
         startDate: 'January/2019',
-        endDate: 'December/2023'
+        endDate: 'December/2023',
+        certificate: 'Diploma - Bacharelado de Ciência da Computação.jpg'
       }
     }
   ];
 
-  openLink(link: string): void {
-    if (link) {
-      window.open(link, "_blank");
-    }
+  constructor(
+    protected override matDialog: MatDialog
+  ) {
+    super();
   }
 }
 
@@ -63,5 +68,6 @@ interface AcademicItemObject {
   instituteURL?: string,
   description?: string,
   startDate: string,
-  endDate?: string
+  endDate?: string,
+  certificate?: string
 }

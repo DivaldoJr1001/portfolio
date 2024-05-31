@@ -1,0 +1,9 @@
+<div class="dialog-container">
+  <div class="dialog-close-button" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </div>
+
+  <img #image [src]="imageURL" [class.d-none]="loading">
+
+  <app-loading-spinner [blackSpinner]="true" *ngIf="loading"></app-loading-spinner>
+</div>

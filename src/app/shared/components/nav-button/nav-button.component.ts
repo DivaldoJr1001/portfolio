@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class NavButtonComponent {
   @Input() localizationString = '';
-  @Input() routerUrl = ''
+  @Input() routerUrl = '';
+  @Input() disableRouting = false;
 
   @Input() matIconBefore = '';
   @Input() matIconAfter = '';
