@@ -30,6 +30,8 @@ export class ImageViewerDialogComponent implements OnInit {
 
   loaded() {
     this.loading = false;
-    this.cd.detectChanges();
+    if (this.cd) {
+      this.cd.detectChanges();
+    }
   }
 }
