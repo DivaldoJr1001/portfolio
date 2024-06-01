@@ -25,11 +25,13 @@
 
     .name {
       font-size: 2rem;
+      line-height: 2rem;
       font-weight: bold;
     }
 
     .info {
       font-size: 1.5rem;
+      line-height: 1.5rem;
       font-style: italic;
       margin-top: 0.5rem;
     }
@@ -43,6 +45,7 @@
   .summary-container {
     display: flex;
     font-size: 1.5rem;
+    line-height: 1.5rem;
     padding: 1rem;
     box-sizing: border-box;
     flex: 5;

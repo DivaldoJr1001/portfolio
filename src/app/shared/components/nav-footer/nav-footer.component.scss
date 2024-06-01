@@ -3,14 +3,7 @@
   position: relative;
   width: 100%;
   padding: 1rem 0;
-}
-
-.movement-buttons-container {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .single-button-spacing {

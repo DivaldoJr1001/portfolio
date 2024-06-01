@@ -12,10 +12,10 @@
         <div class="timespan">
           {{ item[currentLanguage].startDate }} - {{ item[currentLanguage].endDate || ('CAREER_HISTORY.PRESENT' | translate) }}
         </div>
-        <div class="description">{{item[currentLanguage].description}}</div>
+        <div class="description" *ngIf="item[currentLanguage].description">{{item[currentLanguage].description}}</div>
       </div>
     </div>
 
-    <app-nav-footer [previousButton]="{ localizedText: 'ACADEMIC_HISTORY.TITLE', url: paths.ACADEMIC_HISTORY}" [nextButton]="{ localizedText: 'ACADEMIC_HISTORY.TITLE', url: paths.ACADEMIC_HISTORY}"></app-nav-footer>
+    <app-nav-footer [previousButton]="{ localizedText: 'COMPLEMENTARY_EDUCATION.TITLE', url: paths.COMPLEMENTARY_EDUCATION}" [nextButton]="{ localizedText: 'ACADEMIC_HISTORY.TITLE', url: paths.ACADEMIC_HISTORY}"></app-nav-footer>
   </div>
 </div>

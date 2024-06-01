@@ -8,7 +8,7 @@
   margin-bottom: 2rem;
 }
 
-.academic-history-container {
+.complementary-education-container {
   overflow: auto;
   padding: 1rem;
   box-sizing: border-box;
@@ -23,11 +23,11 @@
     }
   }
 
-  .timespan {
+  .timespan, .duration {
     font-weight: bold;
   }
 
-  .timespan, .description {
+  .timespan, .description, .duration {
     margin-top: 1rem;
   }
 
@@ -36,7 +36,7 @@
   }
 }
 
-.academic-history-item {
+.complementary-education-item {
   display: flex;
   flex-direction: column;
 
@@ -47,7 +47,7 @@
   }
 }
 
-.academic-history-item:not(:last-of-type) {
+.complementary-education-item:not(:last-of-type) {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px white solid;

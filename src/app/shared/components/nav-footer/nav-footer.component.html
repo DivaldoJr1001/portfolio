@@ -1,9 +1,8 @@
 <div class="nav-footer-container">
+  <app-nav-button *ngIf="previousButton && (!nextButton || nextButton.url !== previousButton.url)" [localizationString]="previousButton.localizedText" matIconBefore="arrow_back_ios" [routerUrl]="'./../' + previousButton.url"></app-nav-button>
+
   <app-nav-button class="return-button" localizationString="SHARED.RETURN_BUTTON" [routerUrl]="returnUrl"></app-nav-button>
 
-  <div class="movement-buttons-container" [class.single-button-spacing]="!previousButton || (nextButton?.url === previousButton.url)" *ngIf="previousButton || nextButton">
-    <app-nav-button *ngIf="previousButton && (!nextButton || nextButton.url !== previousButton.url)" [localizationString]="previousButton.localizedText" matIconBefore="arrow_back_ios" [routerUrl]="'./../' + previousButton.url"></app-nav-button>
 
-    <app-nav-button *ngIf="nextButton" [localizationString]="nextButton.localizedText" matIconAfter="arrow_forward_ios" [routerUrl]="'./../' + nextButton.url"></app-nav-button>
-  </div>
+  <app-nav-button *ngIf="nextButton" [localizationString]="nextButton.localizedText" matIconAfter="arrow_forward_ios" [routerUrl]="'./../' + nextButton.url"></app-nav-button>
 </div>
