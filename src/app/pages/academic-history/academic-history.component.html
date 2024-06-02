@@ -14,8 +14,8 @@
         </div>
         <div class="description">{{item[currentLanguage].description}}</div>
 
-        <div class="certificate-button" *ngIf="item[currentLanguage].certificate">
-          <app-nav-button localizationString="SHARED.CERTIFICATE" [disableRouting]="true" (click)="openLink(item[currentLanguage].certificate!)"></app-nav-button>
+        <div class="credential-button" *ngIf="item[currentLanguage].credential">
+          <app-nav-button localizationString="SHARED.CREDENTIAL" [disableRouting]="true" (click)="openLink(item[currentLanguage].credential!)"></app-nav-button>
         </div>
       </div>
     </div>

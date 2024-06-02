@@ -10,14 +10,14 @@
           <span class="bold">{{item[currentLanguage].title}}</span> - <span class="institute" [class.clickable]="!!item[currentLanguage].instituteURL" (click)="openLink(item[currentLanguage].instituteURL || '')">{{item[currentLanguage].institute}}</span>
         </div>
         <div class="timespan">
-          {{ item[currentLanguage].startDate }} - {{ item[currentLanguage].endDate || ('COMPLEMENTARY_EDUCATION.PRESENT' | translate) }}
+          {{ item[currentLanguage].startDate }}<span *ngIf="item[currentLanguage].present || item[currentLanguage].endDate"> - {{ item[currentLanguage].endDate || ('COMPLEMENTARY_EDUCATION.PRESENT' | translate) }}</span>
         </div>
         <div class="duration" *ngIf="item[currentLanguage].hours">{{ 'COMPLEMENTARY_EDUCATION.DURATION' | translate }}: {{item[currentLanguage].hours}} {{ 'COMPLEMENTARY_EDUCATION.HOURS' | translate }}</div>
 
         <div class="description" *ngIf="item[currentLanguage].description">{{item[currentLanguage].description}}</div>
 
-        <div class="certificate-button" *ngIf="item[currentLanguage].certificate">
-          <app-nav-button localizationString="SHARED.CERTIFICATE" [disableRouting]="true" (click)="openLink(item[currentLanguage].certificate!)"></app-nav-button>
+        <div class="credential-button" *ngIf="item[currentLanguage].credential">
+          <app-nav-button localizationString="SHARED.CREDENTIAL" [disableRouting]="true" (click)="openLink(item[currentLanguage].credential!)"></app-nav-button>
         </div>
       </div>
     </div>
