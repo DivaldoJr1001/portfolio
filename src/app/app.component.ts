@@ -59,10 +59,8 @@ export class AppComponent extends DestroyEventNoticeComponent implements OnInit 
       next: langObj => {
         const urlParts = this.router.url.split('?l=');
 
-        if (urlParts.length > 1) {
-          const newUrl = urlParts[0] + `?l=${langObj.lang}`;
-          this.router.navigateByUrl(newUrl);
-        }
+        const newUrl = urlParts[0] + `?l=${langObj.lang}`;
+        this.router.navigateByUrl(newUrl);
       }
     });
   }
