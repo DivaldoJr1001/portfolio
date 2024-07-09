@@ -16,14 +16,14 @@ export class CareerHistoryComponent extends HistoryPage {
       'pt-BR': {
         title: 'Desenvolvedor Web Full Stack Freelance',
         company: 'Azulejus',
-        companyURL: 'https://www.instagram.com/azulejus/',
+        companyURL: 'https://azulejus.pt/',
         startDate: 'Julho/2023',
         description: 'Desenvolvimento e manutenção de uma aplicação web de gerenciamento de vendas, clientes, e estoque utilizando as tecnologias Angular, NestJS, Mongoose e MongoDB.'
       },
       'en-US': {
         title: 'Full Stack Freelance Web Developer',
         company: 'Azulejus',
-        companyURL: 'https://www.instagram.com/azulejus/',
+        companyURL: 'https://azulejus.pt/',
         startDate: 'July/2023',
         description: 'Development and maintenance of a web application for managing sales, customers, and inventory using Angular, NestJS, Mongoose, and MongoDB.'
       }
