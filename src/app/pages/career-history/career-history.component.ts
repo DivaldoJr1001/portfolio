@@ -21,7 +21,7 @@ export class CareerHistoryComponent extends HistoryPage {
         description: 'Desenvolvimento e manutenção de uma aplicação web de gerenciamento de vendas, clientes, e estoque utilizando as tecnologias Angular, NestJS, Mongoose e MongoDB.'
       },
       'en-US': {
-        title: 'Full Stack Freelance Web Developer',
+        title: 'Freelance Full Stack Web Developer',
         company: 'Azulejus',
         companyURL: 'https://azulejus.pt/',
         startDate: 'July/2023',
