@@ -1,7 +1,7 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
-import { DestroyEventNoticeComponent } from './destroy-event-notice.component';
+import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { takeUntil } from 'rxjs';
+import { DestroyEventNoticeComponent } from './destroy-event-notice.component';
 
 @Component({
   template: ''
