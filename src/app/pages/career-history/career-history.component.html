@@ -7,15 +7,18 @@
     <div class="work-history-container corner-borders">
       <div class="work-history-item hover-glow-text" *ngFor="let item of workHistory">
         <div class="title">
-          <span class="bold">{{item[currentLanguage].title}}</span> - <span class="company"  [class.clickable]="!!item[currentLanguage].companyURL" (click)="openLink(item[currentLanguage].companyURL || '')">{{item[currentLanguage].company}}</span>
+          <span class="bold">{{ $any(item)[currentLanguage].title }}</span> -
+          <span class="company" [class.clickable]="!!$any(item)[currentLanguage].companyURL" tabindex="0" (click)="openLink($any(item)[currentLanguage].companyURL || '')" (keydown)="onKeydown($event, $any(item)[currentLanguage].companyURL || '')">
+            {{ $any(item)[currentLanguage].company }}
+          </span>
         </div>
         <div class="timespan">
-          {{ item[currentLanguage].startDate }} - {{ item[currentLanguage].endDate || ('CAREER_HISTORY.PRESENT' | translate) }}
+          {{ $any(item)[currentLanguage].startDate }} - {{ $any(item)[currentLanguage].endDate || ('CAREER_HISTORY.PRESENT' | translate) }}
         </div>
-        <div class="description" *ngIf="item[currentLanguage].description">{{item[currentLanguage].description}}</div>
+        <div class="description" *ngIf="$any(item)[currentLanguage].description">{{$any(item)[currentLanguage].description}}</div>
       </div>
     </div>
 
-    <app-nav-footer [previousButton]="{ localizedText: 'COMPLEMENTARY_EDUCATION.TITLE', url: paths.COMPLEMENTARY_EDUCATION}" [nextButton]="{ localizedText: 'ACADEMIC_HISTORY.TITLE', url: paths.ACADEMIC_HISTORY}"></app-nav-footer>
+    <app-nav-footer [previousButton]="{ localizedText: 'COMPLEMENTARY_EDUCATION.TITLE', url: paths.COMPLEMENTARY_EDUCATION}" [nextButton]="{ localizedText: 'ACADEMIC_HISTORY.TITLE', url: paths.ACADEMIC_HISTORY}" [compactModeWidthThreshold]="800"></app-nav-footer>
   </div>
 </div>

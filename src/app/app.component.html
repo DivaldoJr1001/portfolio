@@ -1,18 +1,28 @@
-<div class="outer-container">
+<main>
+  <header>
+    <img
+    class="linkedin-icon hover-glow"
+    src="../../../../assets/icons/linkedin.svg"
+    alt="LinkedIn"
+    tabindex="0"
+    (click)="openLinkedIn()"
+    (keydown)="onKeydown($event, openLinkedIn)">
 
-  <div class="header">
-    <img class="linkedin-icon hover-glow" src="../../../../assets/icons/linkedin.svg" alt="LinkedIn" (click)="openLinkedIn()">
-    <img class="github-icon hover-glow" src="../../../../assets/icons/github.svg" alt="Github" (click)="openGithub()">
-    <app-language-selector ></app-language-selector>
+  <img
+    class="github-icon hover-glow"
+    src="../../../../assets/icons/github.svg"
+    alt="Github"
+    tabindex="0"
+    (click)="openGithub()"
+    (keydown)="onKeydown($event, openGithub)">
+    <app-language-selector [borderColor]="'white'" [compactScreenWidthThreshold]="400"></app-language-selector>
+  </header>
+
+  <div class="router-outlet-container" [@slidePages]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
   </div>
 
-  <div class="router-outlet-container" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" *ngIf="!loadingRouteConfig">
-    <router-outlet #o="outlet"></router-outlet>
-  </div>
-
-  <app-loading-spinner *ngIf="loadingRouteConfig"></app-loading-spinner>
-
-  <div class="footer">
+  <footer>
     {{'@2024 divaldojr.vercel.app'}}
-  </div>
-</div>
+  </footer>
+</main>

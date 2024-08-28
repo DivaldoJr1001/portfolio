@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavFooterComponent } from './nav-footer.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { NavButtonModule } from '../nav-button/nav-button.module';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -13,7 +14,8 @@ import { NavButtonModule } from '../nav-button/nav-button.module';
   imports: [
     CommonModule,
     TranslateModule,
-    NavButtonModule
+    NavButtonModule,
+    MatTooltipModule
   ],
   exports: [
     NavFooterComponent

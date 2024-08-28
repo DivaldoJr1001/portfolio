@@ -1,8 +1,17 @@
 <div class="outer-container">
+  @let screenWidth = (screenSizeService.getScreenWidthObservable() | async) || 0;
   <div class="centered-container">
     <div class="info-header corner-borders hover-glow-text">
       <div class="data-container">
-        <div class="name">{{ 'MAIN_PAGE.NAME' | translate }}</div>
+        <div class="name" matTooltip="Divaldo Aderaldo de Oliveira Júnior">
+          Divaldo
+          <span *ngIf="screenWidth >= 520">Aderaldo</span>
+          <span *ngIf="screenWidth < 520">A.</span>
+          de
+          <span *ngIf="screenWidth >= 600">Oliveira</span>
+          <span *ngIf="screenWidth < 600">O.</span>
+          Júnior
+        </div>
         <div class="info">{{ 'MAIN_PAGE.ROLE' | translate }}</div>
         <div class="info">{{ 'MAIN_PAGE.CERTIFICATIONS' | translate }}</div>
         <div class="info">{{ 'MAIN_PAGE.LOCATION' | translate }}</div>

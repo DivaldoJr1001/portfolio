@@ -11,20 +11,23 @@ export enum Paths {
 const routes: Routes = [
   {
     path: Paths.MAIN,
-    loadChildren: () => import('./pages/main-page/main-page.module').then((m) => m.MainPageModule)
-
+    loadChildren: () => import('./pages/main-page/main-page.module').then((m) => m.MainPageModule),
+    data: { animationState: Paths.MAIN }
   },
   {
     path: Paths.CAREER_HISTORY,
-    loadChildren: () => import('./pages/career-history/career-history.module').then((m) => m.CareerHistoryModule)
+    loadChildren: () => import('./pages/career-history/career-history.module').then((m) => m.CareerHistoryModule),
+    data: { animationState: Paths.CAREER_HISTORY }
   },
   {
     path: Paths.ACADEMIC_HISTORY,
-    loadChildren: () => import('./pages/academic-history/academic-history.module').then((m) => m.AcademicHistoryModule)
+    loadChildren: () => import('./pages/academic-history/academic-history.module').then((m) => m.AcademicHistoryModule),
+    data: { animationState: Paths.ACADEMIC_HISTORY }
   },
   {
     path: Paths.COMPLEMENTARY_EDUCATION,
-    loadChildren: () => import('./pages/complementary-education/complementary-education.module').then((m) => m.ComplementaryEducationModule)
+    loadChildren: () => import('./pages/complementary-education/complementary-education.module').then((m) => m.ComplementaryEducationModule),
+    data: { animationState: Paths.COMPLEMENTARY_EDUCATION }
   },
   {path: '**', redirectTo: Paths.MAIN, pathMatch: 'full'},
 ];

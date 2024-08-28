@@ -1,8 +1,15 @@
 <div class="nav-footer-container">
-  <app-nav-button *ngIf="previousButton && (!nextButton || nextButton.url !== previousButton.url)" [localizationString]="previousButton.localizedText" matIconBefore="arrow_back" [routerUrl]="'./../' + previousButton.url"></app-nav-button>
+  @let compactMode = compactModeWidthThreshold ? ((screenSizeService.getScreenWidthObservable() | async) || 0) < compactModeWidthThreshold : false;
 
-  <app-nav-button class="return-button" localizationString="SHARED.RETURN_BUTTON" [routerUrl]="returnUrl"></app-nav-button>
+  @let localizationStringPrevious = compactMode ? undefined : (previousButton?.localizedText || '');
+  @let matTooltipPrevious = compactMode ? localizationStringPrevious : undefined;
+  <app-nav-button [ngStyle]="compactMode ? { 'flex': '1' } : { 'min-width': '12rem' }" *ngIf="previousButton && (!nextButton || nextButton.url !== previousButton.url)" [localizationString]="localizationStringPrevious" [matTooltip]="matTooltipPrevious" [matIconBefore]="compactMode ? undefined : 'arrow_back'" [matIconCenter]="compactMode ? 'arrow_back' : undefined" [routerUrl]="'./../' + previousButton.url"></app-nav-button>
 
+  @let localizationStringReturn = compactMode ? undefined : 'SHARED.RETURN_BUTTON';
+  @let matTooltipReturn = compactMode ? localizationStringReturn : undefined;
+  <app-nav-button [ngStyle]="compactMode ? { 'flex': '1', 'margin': '0 1rem' } : { 'min-width': '12rem' }" class="return-button" [matIconCenter]="compactMode ? 'arrow_downward' : undefined" [localizationString]="localizationStringReturn" [matTooltip]="matTooltipReturn" [routerUrl]="returnUrl"></app-nav-button>
 
-  <app-nav-button *ngIf="nextButton" [localizationString]="nextButton.localizedText" matIconAfter="arrow_forward" [routerUrl]="'./../' + nextButton.url"></app-nav-button>
+  @let localizationStringNext = compactMode ? undefined : (previousButton?.localizedText || '');
+  @let matTooltipNext = compactMode ? localizationStringNext : undefined;
+  <app-nav-button [ngStyle]="compactMode ? { 'flex': '1' } : { 'min-width': '12rem' }" *ngIf="nextButton" [localizationString]="localizationStringNext" [matTooltip]="matTooltipNext" [matIconAfter]="compactMode ? undefined : 'arrow_forward'" [matIconCenter]="compactMode ? 'arrow_forward' : undefined" [routerUrl]="'./../' + nextButton.url"></app-nav-button>
 </div>

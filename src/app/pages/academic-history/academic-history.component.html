@@ -7,19 +7,23 @@
     <div class="academic-history-container corner-borders">
       <div class="academic-history-item hover-glow-text" *ngFor="let item of academicHistory">
         <div class="title">
-          <span class="bold">{{item[currentLanguage].title}}</span> - <span class="institute" [class.clickable]="!!item[currentLanguage].instituteURL" (click)="openLink(item[currentLanguage].instituteURL || '')">{{item[currentLanguage].institute}}</span>
+          <span class="bold">{{$any(item)[currentLanguage].title}}</span> -
+          <span class="institute" tabindex="0" [class.clickable]="!!$any(item)[currentLanguage].instituteURL" (click)="openLink($any(item)[currentLanguage].instituteURL || '')" (keydown)="onKeydown($event, $any(item)[currentLanguage].instituteURL || '')">
+            {{$any(item)[currentLanguage].institute}}
+          </span>
+
         </div>
         <div class="timespan">
-          {{ item[currentLanguage].startDate }} - {{ item[currentLanguage].endDate || ('ACADEMIC_HISTORY.PRESENT' | translate) }}
+          {{ $any(item)[currentLanguage].startDate }} - {{ $any(item)[currentLanguage].endDate || ('ACADEMIC_HISTORY.PRESENT' | translate) }}
         </div>
-        <div class="description">{{item[currentLanguage].description}}</div>
+        <div class="description">{{$any(item)[currentLanguage].description}}</div>
 
-        <div class="credential-button" *ngIf="item[currentLanguage].credential">
-          <app-nav-button localizationString="SHARED.CREDENTIAL" [disableRouting]="true" (click)="openLink(item[currentLanguage].credential!)"></app-nav-button>
+        <div class="credential-button" *ngIf="$any(item)[currentLanguage].credential">
+          <app-nav-button localizationString="SHARED.CREDENTIAL" [disableRouting]="true" (click)="openLink($any(item)[currentLanguage].credential!)"></app-nav-button>
         </div>
       </div>
     </div>
 
-    <app-nav-footer [previousButton]="{ localizedText: 'CAREER_HISTORY.TITLE', url: paths.CAREER_HISTORY}" [nextButton]="{ localizedText: 'COMPLEMENTARY_EDUCATION.TITLE', url: paths.COMPLEMENTARY_EDUCATION}"></app-nav-footer>
+    <app-nav-footer [previousButton]="{ localizedText: 'CAREER_HISTORY.TITLE', url: paths.CAREER_HISTORY}" [nextButton]="{ localizedText: 'COMPLEMENTARY_EDUCATION.TITLE', url: paths.COMPLEMENTARY_EDUCATION}" [compactModeWidthThreshold]="800"></app-nav-footer>
   </div>
 </div>

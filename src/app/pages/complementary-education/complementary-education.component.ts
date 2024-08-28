@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Paths } from 'src/app/app-routing.module';
-import { HistoryPage } from 'src/app/shared/abstract-sources/history-page.component';
+import { HistoryPageComponent } from 'src/app/shared/abstract-sources/history-page.component';
 
 @Component({
   selector: 'app-complementary-education',
@@ -8,10 +8,10 @@ import { HistoryPage } from 'src/app/shared/abstract-sources/history-page.compon
   styleUrls: ['./complementary-education.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ComplementaryEducationComponent extends HistoryPage {
+export class ComplementaryEducationComponent extends HistoryPageComponent {
   paths = Paths;
 
-  ComplementaryEducation: Record<any, AcademicItemObject>[] = [
+  ComplementaryEducation: Record<never, AcademicItemObject>[] = [
     {
       'pt-BR': {
         title: 'Cybersecurity Fundamentals ',

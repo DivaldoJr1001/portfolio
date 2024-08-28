@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Paths } from 'src/app/app-routing.module';
-import { HistoryPage } from 'src/app/shared/abstract-sources/history-page.component';
+import { HistoryPageComponent } from 'src/app/shared/abstract-sources/history-page.component';
 
 @Component({
   selector: 'app-career-history',
@@ -8,10 +8,10 @@ import { HistoryPage } from 'src/app/shared/abstract-sources/history-page.compon
   styleUrls: ['./career-history.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CareerHistoryComponent extends HistoryPage {
+export class CareerHistoryComponent extends HistoryPageComponent {
   paths = Paths;
 
-  workHistory: Record<any, WorkItemObject>[] = [
+  workHistory: Record<never, WorkItemObject>[] = [
     {
       'pt-BR': {
         title: 'Desenvolvedor Web Full Stack Freelance',

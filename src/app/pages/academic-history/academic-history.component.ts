@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Paths } from 'src/app/app-routing.module';
-import { HistoryPage } from 'src/app/shared/abstract-sources/history-page.component';
+import { HistoryPageComponent } from 'src/app/shared/abstract-sources/history-page.component';
 
 @Component({
   selector: 'app-academic-history',
@@ -8,10 +8,10 @@ import { HistoryPage } from 'src/app/shared/abstract-sources/history-page.compon
   styleUrls: ['./academic-history.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AcademicHistoryComponent extends HistoryPage {
+export class AcademicHistoryComponent extends HistoryPageComponent {
   paths = Paths;
 
-  academicHistory: Record<any, AcademicItemObject>[] = [
+  academicHistory: Record<never, AcademicItemObject>[] = [
     {
       'pt-BR': {
         title: 'MBA em Ciência de Dados',

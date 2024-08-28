@@ -2,7 +2,6 @@
   display: flex;
   position: relative;
   width: 100%;
-  padding: 1rem 0;
   justify-content: space-between;
 }
 
@@ -12,8 +11,4 @@
 
 .return-button {
   z-index: 10;
-}
-
-app-nav-button {
-  min-width: 12rem;
 }

@@ -1,38 +1,42 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, RouteConfigLoadEnd, RouteConfigLoadStart, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, RouteConfigLoadEnd, RouteConfigLoadStart, Router, RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { takeUntil } from 'rxjs';
 import { envVariables } from 'src/environment/environment';
-import { fadeAnimation } from './shared/constants/animations';
+import { ScreenSizeService } from 'src/services/screen-size.service';
+import { slidePageTransitionAnimations } from './shared/constants/route-transition-animations';
 import { DestroyEventNoticeComponent } from './shared/extensions/destroy-event-notice.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [fadeAnimation]
+  animations: [slidePageTransitionAnimations]
 })
 export class AppComponent extends DestroyEventNoticeComponent implements OnInit {
   title = 'portfolio'
 
-  loadingRouteConfig: boolean = false;
+  loadingRouteConfig = false;
 
   constructor(
     protected translate: TranslateService,
     protected router: Router,
     protected activatedRoute: ActivatedRoute,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    protected screenSizeService: ScreenSizeService
   ) {
     translate.addLangs(['pt-BR', 'en-US']);
     super();
   }
 
   ngOnInit(): void {
+    this.screenSizeService.init();
+
     this.router.events.subscribe(event => {
       if (event instanceof RouteConfigLoadStart) {
         this.loadingRouteConfig = true;
       } else if (event instanceof RouteConfigLoadEnd) {
-        setTimeout((_: any) => {
+        setTimeout(() => {
           this.loadingRouteConfig = false;
           this.cd.detectChanges();
         }, 500);
@@ -74,4 +78,16 @@ export class AppComponent extends DestroyEventNoticeComponent implements OnInit 
     const link = envVariables.linkedInLink;
     window.open(link, "_blank");
   }
+
+  onKeydown(event: KeyboardEvent, callback: () => void) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      callback();
+    }
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData['animationState'];
+   }
 }

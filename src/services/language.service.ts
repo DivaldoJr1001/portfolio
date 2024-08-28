@@ -7,9 +7,6 @@ import { BehaviorSubject } from 'rxjs';
 export class LanguageService {
   private currentLanguage$: BehaviorSubject<number> = new BehaviorSubject<number>(Languages.PT);
 
-  constructor() {
-  }
-
   getLanguageObservable(): BehaviorSubject<number> {
     return this.currentLanguage$;
   }

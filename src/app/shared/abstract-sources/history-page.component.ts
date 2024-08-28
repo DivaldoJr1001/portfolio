@@ -4,10 +4,16 @@ import { CurrentLanguageChecker } from '../extensions/current-language-checker.c
 @Component({
   template: ''
 })
-export abstract class HistoryPage extends CurrentLanguageChecker {
+export abstract class HistoryPageComponent extends CurrentLanguageChecker {
   openLink(link: string): void {
     if (link) {
       window.open(link, "_blank");
+    }
+  }
+
+  onKeydown(event: KeyboardEvent, url: string): void {
+    if ((event.key === 'Enter' || event.key === ' ') && url) {
+      this.openLink(url);
     }
   }
 }

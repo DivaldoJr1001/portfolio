@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScreenSizeService } from 'src/services/screen-size.service';
 
 @Component({
   selector: 'app-main-page',
@@ -6,4 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
+  constructor(
+    protected screenSizeService: ScreenSizeService
+  ) {}
 }

@@ -1,7 +1,14 @@
-.outer-container {
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+
   color: var(--primary-text) !important;
   padding: 0 !important;
-  overflow: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
 
   background-color: rgb(27, 27, 27);
 
@@ -14,14 +21,19 @@
     flex: 1;
   }
 
-  .header {
+  header {
     display: flex;
+    width: 100%;
     padding: 1rem;
     box-sizing: border-box;
     flex-direction: row;
     align-items: center;
-    align-self: end;
-    height: 82px;
+    justify-content: flex-end;
+    height: var(--header-height);
+
+    border-bottom: 2px white solid;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
 
     .github-icon, .linkedin-icon {
       height: 2rem;
@@ -40,21 +52,24 @@
     }
   }
 
-  .footer {
+  footer {
     display: flex;
-    height: 1rem;
+    height: var(--footer-height);
+    width: 100%;
     padding: 1rem;
     box-sizing: border-box;
     flex-direction: row;
-    align-items: flex-end;
-    align-self: end;
-    height: 3rem;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 2px white solid;
+    box-sizing: border-box;
+    margin-top: 1rem;
   }
 }
 
 .router-outlet-container {
   width: inherit;
-  overflow: hidden;
 }
 
 router-outlet ~ * {

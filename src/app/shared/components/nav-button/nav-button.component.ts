@@ -6,10 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./nav-button.component.scss']
 })
 export class NavButtonComponent {
-  @Input() localizationString = '';
+  @Input() localizationString: string | undefined = '';
   @Input() routerUrl = '';
   @Input() disableRouting = false;
 
-  @Input() matIconBefore = '';
-  @Input() matIconAfter = '';
+  @Input() matIconCenter: string | undefined = '';
+  @Input() matIconBefore: string | undefined = '';
+  @Input() matIconAfter: string | undefined = '';
 }

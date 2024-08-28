@@ -4,6 +4,7 @@ import { MainPageComponent } from './main-page.component';
 import { RouterModule } from '@angular/router';
 import { NavButtonModule } from 'src/app/shared/components/nav-button/nav-button.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     TranslateModule,
     NavButtonModule,
+    MatTooltipModule,
     RouterModule.forChild([
       {
         path: '', component: MainPageComponent

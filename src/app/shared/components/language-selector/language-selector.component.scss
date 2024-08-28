@@ -1,9 +1,15 @@
-.outer-container {
+.language-selector-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0 1rem;
   box-sizing: border-box;
+}
+
+@media (max-width: 400px) {
+  .language-selector-container {
+    padding: 0 !important;
+  }
 }
 
 .flag-container {
