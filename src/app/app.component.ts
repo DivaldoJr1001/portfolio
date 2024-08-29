@@ -30,7 +30,7 @@ export class AppComponent extends DestroyEventNoticeComponent implements OnInit 
   }
 
   ngOnInit(): void {
-    this.screenSizeService.init();
+    this.screenSizeService.init({ headerHeight: 82, footerHeight: 48 });
 
     this.router.events.subscribe(event => {
       if (event instanceof RouteConfigLoadStart) {

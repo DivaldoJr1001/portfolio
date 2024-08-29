@@ -1,5 +1,7 @@
-<div class="outer-container">
-  @let screenWidth = (screenSizeService.getScreenWidthObservable() | async) || 0;
+@let screenWidth = (screenSizeService.getScreenWidthObservable() | async) || 0;
+@let bodyViewHeight = screenSizeService.getBodyViewHeightPx();
+
+<div class="body-view-container" [ngStyle]="{ height: bodyViewHeight }">
   <div class="centered-container">
     <div class="info-header corner-borders hover-glow-text">
       <div class="data-container">

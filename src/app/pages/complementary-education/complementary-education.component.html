@@ -1,5 +1,6 @@
-<div class="outer-container">
-  <div class="centered-container">
+@let bodyViewHeight = screenSizeService.getBodyViewHeightPx();
+
+<div class="body-view-container" [ngStyle]="{ height: bodyViewHeight }">  <div class="centered-container">
     <div class="title-header corner-borders hover-glow-text">
       {{ 'COMPLEMENTARY_EDUCATION.TITLE' | translate }}
     </div>
