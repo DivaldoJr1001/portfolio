@@ -2,7 +2,7 @@ import { animate, animateChild, group, query, style, transition, trigger } from 
 import { Paths } from 'src/app/app-routing.module';
 
 export const slidePageTransitionAnimations = trigger('slidePages', [
-  transition(`${Paths.MAIN} => *, ${Paths.CAREER_HISTORY} => ${Paths.ACADEMIC_HISTORY}, ${Paths.ACADEMIC_HISTORY} => ${Paths.COMPLEMENTARY_EDUCATION}, ${Paths.COMPLEMENTARY_EDUCATION} => ${Paths.CAREER_HISTORY}`, [
+  transition(`${Paths.MAIN} => *, ${Paths.CAREER_HISTORY} => ${Paths.ACADEMIC_HISTORY}, ${Paths.ACADEMIC_HISTORY} => ${Paths.COMPLEMENTARY_EDUCATION}, ${Paths.COMPLEMENTARY_EDUCATION} => ${Paths.PROJECTS}, ${Paths.PROJECTS} => ${Paths.CAREER_HISTORY}`, [
     style({ position: 'relative' }),
     query(':enter, :leave', [
       style({
@@ -20,7 +20,7 @@ export const slidePageTransitionAnimations = trigger('slidePages', [
     ]),
     query(':enter', animateChild())
   ]),
-  transition(`* => ${Paths.MAIN}, ${Paths.CAREER_HISTORY} => ${Paths.COMPLEMENTARY_EDUCATION}, ${Paths.COMPLEMENTARY_EDUCATION} => ${Paths.ACADEMIC_HISTORY}, ${Paths.ACADEMIC_HISTORY} => ${Paths.CAREER_HISTORY}`, [
+  transition(`* => ${Paths.MAIN}, ${Paths.CAREER_HISTORY} => ${Paths.PROJECTS}, ${Paths.PROJECTS} => ${Paths.COMPLEMENTARY_EDUCATION}, ${Paths.COMPLEMENTARY_EDUCATION} => ${Paths.ACADEMIC_HISTORY}, ${Paths.ACADEMIC_HISTORY} => ${Paths.CAREER_HISTORY}`, [
     style({ position: 'relative' }),
     query(':enter, :leave', [
       style({

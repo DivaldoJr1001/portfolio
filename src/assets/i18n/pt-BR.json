@@ -7,6 +7,8 @@
 
     "RETURN_BUTTON": "Voltar",
 
-    "CREDENTIAL": "Credencial"
+    "CREDENTIAL": "Credencial",
+    "GITHUB": "Github",
+    "SITE": "Website"
   }
 }

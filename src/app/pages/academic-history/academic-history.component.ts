@@ -11,7 +11,7 @@ import { HistoryPageComponent } from 'src/app/shared/abstract-sources/history-pa
 export class AcademicHistoryComponent extends HistoryPageComponent {
   paths = Paths;
 
-  academicHistory: Record<never, AcademicItemObject>[] = [
+  academicHistory: Record<string, AcademicItemObject>[] = [
     {
       'pt-BR': {
         title: 'MBA em Ciência de Dados',

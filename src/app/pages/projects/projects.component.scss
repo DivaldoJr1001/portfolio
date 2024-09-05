@@ -1,0 +1,69 @@
+.title-header {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 400px) {
+  .title-header {
+    font-size: 1.4rem !important;
+    line-height: 1.4rem !important;
+  }
+}
+
+.projects-container {
+  overflow: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  @media (max-width: 650px) {
+    .title {
+      font-size: 1rem !important;
+    }
+  }
+
+  .description {
+    white-space: pre-wrap;
+  }
+}
+
+.project-item:not(:last-of-type) {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px white solid;
+}
+
+.project-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 1rem;
+
+  app-nav-button {
+    width: 8rem;
+  }
+
+  app-nav-button:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .project-buttons {
+    justify-content: space-around;
+  }
+}
+
+app-nav-footer {
+  margin-top: 1rem;
+}

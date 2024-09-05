@@ -11,7 +11,7 @@ import { HistoryPageComponent } from 'src/app/shared/abstract-sources/history-pa
 export class CareerHistoryComponent extends HistoryPageComponent {
   paths = Paths;
 
-  workHistory: Record<never, WorkItemObject>[] = [
+  workHistory: Record<string, WorkItemObject>[] = [
     {
       'pt-BR': {
         title: 'Desenvolvedor Web Full Stack Freelance',

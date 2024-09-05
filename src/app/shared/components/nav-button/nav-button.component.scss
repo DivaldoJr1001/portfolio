@@ -4,11 +4,13 @@
 }
 
 .icon-before {
-    margin-right: 1rem;
+  position: absolute;
+  left: 1rem;
 }
 
 .icon-after {
-    margin-left: 1rem;
+  position: absolute;
+  right: 1rem;
 }
 
 .button-container {

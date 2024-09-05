@@ -8,21 +8,21 @@
     <div class="complementary-education-container corner-borders">
       <div class="complementary-education-item hover-glow-text" *ngFor="let item of ComplementaryEducation">
         <div class="title">
-          <span class="bold">{{$any(item)[currentLanguage].title}}</span> - <span class="institute" [class.clickable]="!!$any(item)[currentLanguage].instituteURL" tabindex="0" (click)="openLink($any(item)[currentLanguage].instituteURL || '')" (keydown)="onKeydown($event, $any(item)[currentLanguage].instituteURL || '')">{{$any(item)[currentLanguage].institute}}</span>
+          <span class="bold">{{item[currentLanguage].title}}</span> - <span class="institute" [class.clickable]="!!item[currentLanguage].instituteURL" tabindex="0" (click)="openLink(item[currentLanguage].instituteURL || '')" (keydown)="onKeydown($event, item[currentLanguage].instituteURL || '')">{{item[currentLanguage].institute}}</span>
         </div>
         <div class="timespan">
-          {{ $any(item)[currentLanguage].startDate }}<span *ngIf="$any(item)[currentLanguage].present || $any(item)[currentLanguage].endDate"> - {{ $any(item)[currentLanguage].endDate || ('COMPLEMENTARY_EDUCATION.PRESENT' | translate) }}</span>
+          {{ item[currentLanguage].startDate }}<span *ngIf="item[currentLanguage].present || item[currentLanguage].endDate"> - {{ item[currentLanguage].endDate || ('COMPLEMENTARY_EDUCATION.PRESENT' | translate) }}</span>
         </div>
-        <div class="duration" *ngIf="$any(item)[currentLanguage].hours">{{ 'COMPLEMENTARY_EDUCATION.DURATION' | translate }}: {{$any(item)[currentLanguage].hours}} {{ 'COMPLEMENTARY_EDUCATION.HOURS' | translate }}</div>
+        <div class="duration" *ngIf="item[currentLanguage].hours">{{ 'COMPLEMENTARY_EDUCATION.DURATION' | translate }}: {{item[currentLanguage].hours}} {{ 'COMPLEMENTARY_EDUCATION.HOURS' | translate }}</div>
 
-        <div class="description" *ngIf="$any(item)[currentLanguage].description">{{$any(item)[currentLanguage].description}}</div>
+        <div class="description" *ngIf="item[currentLanguage].description">{{item[currentLanguage].description}}</div>
 
-        <div class="credential-button" *ngIf="$any(item)[currentLanguage].credential">
-          <app-nav-button localizationString="SHARED.CREDENTIAL" [disableRouting]="true" (click)="openLink($any(item)[currentLanguage].credential!)"></app-nav-button>
+        <div class="credential-button" *ngIf="item[currentLanguage].credential">
+          <app-nav-button localizationString="SHARED.CREDENTIAL" [disableRouting]="true" (click)="openLink(item[currentLanguage].credential!)"></app-nav-button>
         </div>
       </div>
     </div>
 
-    <app-nav-footer [previousButton]="{ localizedText: 'ACADEMIC_HISTORY.TITLE', url: paths.ACADEMIC_HISTORY}" [nextButton]="{ localizedText: 'CAREER_HISTORY.TITLE', url: paths.CAREER_HISTORY}" [compactModeWidthThreshold]="800"></app-nav-footer>
+    <app-nav-footer [previousButton]="{ localizedText: 'ACADEMIC_HISTORY.TITLE', url: paths.ACADEMIC_HISTORY}" [nextButton]="{ localizedText: 'PROJECTS.TITLE', url: paths.PROJECTS}" [compactModeWidthThreshold]="800"></app-nav-footer>
   </div>
 </div>

@@ -11,7 +11,7 @@ import { HistoryPageComponent } from 'src/app/shared/abstract-sources/history-pa
 export class ComplementaryEducationComponent extends HistoryPageComponent {
   paths = Paths;
 
-  ComplementaryEducation: Record<never, AcademicItemObject>[] = [
+  ComplementaryEducation: Record<string, AcademicItemObject>[] = [
     {
       'pt-BR': {
         title: 'Cybersecurity Fundamentals ',

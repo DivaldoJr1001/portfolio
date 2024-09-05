@@ -5,7 +5,8 @@ export enum Paths {
   MAIN = 'profile',
   CAREER_HISTORY = 'careerHistory',
   ACADEMIC_HISTORY = 'academicHistory',
-  COMPLEMENTARY_EDUCATION = 'complementaryEducation'
+  COMPLEMENTARY_EDUCATION = 'complementaryEducation',
+  PROJECTS = 'projects'
 }
 
 const routes: Routes = [
@@ -28,6 +29,11 @@ const routes: Routes = [
     path: Paths.COMPLEMENTARY_EDUCATION,
     loadChildren: () => import('./pages/complementary-education/complementary-education.module').then((m) => m.ComplementaryEducationModule),
     data: { animationState: Paths.COMPLEMENTARY_EDUCATION }
+  },
+  {
+    path: Paths.PROJECTS,
+    loadChildren: () => import('./pages/projects/projects.module').then((m) => m.ProjectsModule),
+    data: { animationState: Paths.PROJECTS }
   },
   {path: '**', redirectTo: Paths.MAIN, pathMatch: 'full'},
 ];

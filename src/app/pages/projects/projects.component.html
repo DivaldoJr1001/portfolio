@@ -1,0 +1,26 @@
+@let bodyViewHeight = screenSizeService.getBodyViewHeightPx();
+
+<div class="body-view-container" [ngStyle]="{ height: bodyViewHeight }">  <div class="centered-container">
+    <div class="title-header corner-borders hover-glow-text">
+      {{ 'PROJECTS.TITLE' | translate }}
+    </div>
+
+    <div class="projects-container corner-borders">
+      <div class="project-item hover-glow-text" *ngFor="let item of workHistory">
+        <div class="title">
+          <span class="bold">{{ item[currentLanguage].title }}</span>
+        </div>
+        <div class="description" *ngIf="item[currentLanguage].description">{{item[currentLanguage].description}}</div>
+
+        @let codeUrl = item[currentLanguage].codeUrl;
+        @let siteUrl = item[currentLanguage].siteUrl;
+        <div class="project-buttons" *ngIf="codeUrl || siteUrl">
+          <app-nav-button *ngIf="codeUrl" localizationString="SHARED.GITHUB" [disableRouting]="true" (click)="openLink(codeUrl)"></app-nav-button>
+          <app-nav-button *ngIf="siteUrl" localizationString="SHARED.SITE" [disableRouting]="true" (click)="openLink(siteUrl)"></app-nav-button>
+        </div>
+      </div>
+    </div>
+
+    <app-nav-footer [previousButton]="{ localizedText: 'COMPLEMENTARY_EDUCATION.TITLE', url: paths.COMPLEMENTARY_EDUCATION}" [nextButton]="{ localizedText: 'CAREER_HISTORY.TITLE', url: paths.CAREER_HISTORY}" [compactModeWidthThreshold]="800"></app-nav-footer>
+  </div>
+</div>

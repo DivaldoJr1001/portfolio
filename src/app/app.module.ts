@@ -19,6 +19,7 @@ export function HttpLoaderFactory(_httpBackend: HttpBackend) {
     '/assets/i18n/pages/career-history/',
     '/assets/i18n/pages/academic-history/',
     '/assets/i18n/pages/complementary-education/',
+    '/assets/i18n/pages/projects/',
   ]);
 }
 
