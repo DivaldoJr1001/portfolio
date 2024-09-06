@@ -1,11 +1,23 @@
+import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
-  styleUrls: ['./language-selector.component.scss']
+  styleUrls: ['./language-selector.component.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    TranslateModule,
+    MatIconModule,
+    MatMenuModule,
+    MatTooltipModule
+  ]
 })
 export class LanguageSelectorComponent implements OnInit, OnDestroy {
 

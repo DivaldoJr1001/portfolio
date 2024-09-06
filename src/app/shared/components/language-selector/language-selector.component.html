@@ -3,13 +3,13 @@
     {{ langStrings[currentLanguage || defaultLanguage]['LANGUAGE'] }}: &nbsp;
   </div>
 
-  <div class="flag-container" *ngFor="let lang of languages" [class.clickable]="currentLanguage !== lang" [ngStyle]="currentLanguage === lang ? {opacity: '1', border: 'solid 4px ' + borderColor } : {}" title="{{ $any(langStrings[currentLanguage || defaultLanguage])[lang] }}" tabindex="0" (click)="currentLanguage !== lang ? changeLanguage(lang) : undefined" (keydown)="onKeydown($event, lang)">
+  <div class="flag-container" *ngFor="let lang of languages" [class.clickable]="currentLanguage !== lang" [ngStyle]="currentLanguage === lang ? {opacity: '1', border: 'solid 4px ' + borderColor } : {}" matTooltip="{{ $any(langStrings[currentLanguage || defaultLanguage])[lang] }}" tabindex="0" (click)="currentLanguage !== lang ? changeLanguage(lang) : undefined" (keydown)="onKeydown($event, lang)">
     <img [src]="pathToFlags + '/' + lang + '.svg'" alt="{{ $any(langStrings[currentLanguage || defaultLanguage])[lang] }}">
   </div>
 </div>
 
 <div class="language-selector-container clickable" [matMenuTriggerFor]="menu" *ngIf="!!compactMode && !!(currentLanguage || defaultLanguage)">
-  <div class="flag-container" [ngStyle]="{opacity: '1', border: 'solid 4px ' + borderColor }" title="{{ $any(langStrings[currentLanguage || defaultLanguage])[currentLanguage] }}">
+  <div class="flag-container" [ngStyle]="{opacity: '1', border: 'solid 4px ' + borderColor }" matTooltip="{{ $any(langStrings[currentLanguage || defaultLanguage])[currentLanguage] }}">
     <img [src]="pathToFlags + '/' + (currentLanguage || defaultLanguage) + '.svg'" alt="{{ $any(langStrings[currentLanguage || defaultLanguage])[(currentLanguage || defaultLanguage)] }}">
   </div>
   <mat-icon [ngStyle]="{color: borderColor}">arrow_drop_down</mat-icon>

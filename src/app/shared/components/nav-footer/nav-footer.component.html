@@ -2,14 +2,14 @@
   @let compactMode = compactModeWidthThreshold ? ((screenSizeService.getScreenWidthObservable() | async) || 0) < compactModeWidthThreshold : false;
 
   @let localizationStringPrevious = compactMode ? undefined : (previousButton?.localizedText || '');
-  @let matTooltipPrevious = compactMode ? localizationStringPrevious : undefined;
-  <app-nav-button class="f1" *ngIf="previousButton && (!nextButton || nextButton.url !== previousButton.url)" [localizationString]="localizationStringPrevious" [matTooltip]="matTooltipPrevious" [matIconBefore]="compactMode ? undefined : 'arrow_back'" [matIconCenter]="compactMode ? 'arrow_back' : undefined" [routerUrl]="'./../' + previousButton.url"></app-nav-button>
+  @let matTooltipPrevious = compactMode ? (previousButton?.localizedText || '') : undefined;
+  <app-nav-button class="f1" *ngIf="previousButton && (!nextButton || nextButton.url !== previousButton.url)" [localizationString]="localizationStringPrevious" [matTooltip]="(matTooltipPrevious || '') | translate" [matIconBefore]="compactMode ? undefined : 'arrow_back'" [matIconCenter]="compactMode ? 'arrow_back' : undefined" [routerUrl]="'./../' + previousButton.url"></app-nav-button>
 
   @let localizationStringReturn = compactMode ? undefined : 'SHARED.RETURN_BUTTON';
-  @let matTooltipReturn = compactMode ? localizationStringReturn : undefined;
-  <app-nav-button [ngStyle]="compactMode ? { 'flex': '0.5', 'margin': '0 1rem' } : { 'flex': '0.5', 'margin': '0 3rem' }" class="return-button" [matIconCenter]="compactMode ? 'arrow_downward' : undefined" [localizationString]="localizationStringReturn" [matTooltip]="matTooltipReturn" [routerUrl]="returnUrl"></app-nav-button>
+  @let matTooltipReturn = compactMode ? 'SHARED.RETURN_BUTTON' : undefined;
+  <app-nav-button [ngStyle]="compactMode ? { 'flex': '0.5', 'margin': '0 1rem' } : { 'flex': '0.5', 'margin': '0 3rem' }" class="return-button" [matIconCenter]="compactMode ? 'arrow_downward' : undefined" [localizationString]="localizationStringReturn" [matTooltip]="(matTooltipReturn || '') | translate" [routerUrl]="returnUrl"></app-nav-button>
 
   @let localizationStringNext = compactMode ? undefined : (nextButton?.localizedText || '');
-  @let matTooltipNext = compactMode ? localizationStringNext : undefined;
-  <app-nav-button class="f1" *ngIf="nextButton" [localizationString]="localizationStringNext" [matTooltip]="matTooltipNext" [matIconAfter]="compactMode ? undefined : 'arrow_forward'" [matIconCenter]="compactMode ? 'arrow_forward' : undefined" [routerUrl]="'./../' + nextButton.url"></app-nav-button>
+  @let matTooltipNext = compactMode ? (nextButton?.localizedText || '') : undefined;
+  <app-nav-button class="f1" *ngIf="nextButton" [localizationString]="localizationStringNext" [matTooltip]="(matTooltipNext || '') | translate" [matIconAfter]="compactMode ? undefined : 'arrow_forward'" [matIconCenter]="compactMode ? 'arrow_forward' : undefined" [routerUrl]="'./../' + nextButton.url"></app-nav-button>
 </div>

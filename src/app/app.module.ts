@@ -8,9 +8,10 @@ import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { LanguageService } from 'src/services/language.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LanguageSelectorModule } from './shared/components/language-selector/language-selector.module';
+import { LanguageSelectorComponent } from './shared/components/language-selector/language-selector.component';
 import { LoadingSpinnerModule } from './shared/components/loading-spinner/loading-spinner.module';
 import { NavButtonModule } from './shared/components/nav-button/nav-button.module';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 export function HttpLoaderFactory(_httpBackend: HttpBackend) {
   return new MultiTranslateHttpLoader(_httpBackend, [
@@ -32,8 +33,9 @@ export function HttpLoaderFactory(_httpBackend: HttpBackend) {
     BrowserAnimationsModule,
     AppRoutingModule,
     NavButtonModule,
-    LanguageSelectorModule,
+    LanguageSelectorComponent,
     LoadingSpinnerModule,
+    MatTooltipModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

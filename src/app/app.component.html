@@ -6,7 +6,8 @@
     alt="LinkedIn"
     tabindex="0"
     (click)="openLinkedIn()"
-    (keydown)="onKeydown($event, openLinkedIn)">
+    (keydown)="onKeydown($event, openLinkedIn)"
+    matTooltip="{{ 'SHARED.LINKEDIN' | translate }}">
 
   <img
     class="github-icon hover-glow"
@@ -14,7 +15,8 @@
     alt="Github"
     tabindex="0"
     (click)="openGithub()"
-    (keydown)="onKeydown($event, openGithub)">
+    (keydown)="onKeydown($event, openGithub)"
+    matTooltip="{{ 'SHARED.GITHUB' | translate }}">
     <app-language-selector [borderColor]="'white'" [compactScreenWidthThreshold]="400"></app-language-selector>
   </header>
 
