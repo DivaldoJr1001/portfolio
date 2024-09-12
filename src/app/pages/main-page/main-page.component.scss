@@ -45,15 +45,25 @@
       margin-top: 0.5rem;
     }
 
+
+  @media (max-width: 800px) {
+    .info {
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+    }
+  }
+
     @media (max-width: 520px) {
       .info {
         font-size: 1rem !important;
+        line-height: 1rem !important;
       }
     }
 
     @media (max-width: 400px) {
       .info {
         font-size: 0.8rem !important;
+        line-height: 0.8rem !important;
       }
     }
   }
@@ -78,6 +88,15 @@
   @media (max-width: 400px) {
     .summary-container {
       font-size: 1rem;
+      line-height: 1rem;
+    }
+  }
+
+  @media (max-height: 800px) {
+    .summary-container {
+      font-size: 1rem;
+      line-height: 1rem;
+      flex: 1;
     }
   }
 
@@ -106,6 +125,24 @@
       app-nav-button {
         width: 100% !important;
         flex: 1;
+      }
+    }
+  }
+
+  @media (max-height: 800px) and (min-width: 600px) {
+    .nav-buttons-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 1rem;
+      column-gap: 1rem;
+
+      app-nav-button {
+        font-size: 0.8rem;
+        width: 12rem;
+      }
+
+      app-nav-button:not(:last-of-type) {
+        margin-bottom: 0;
       }
     }
   }
