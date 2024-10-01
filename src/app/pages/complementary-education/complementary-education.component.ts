@@ -14,6 +14,26 @@ export class ComplementaryEducationComponent extends HistoryPageComponent {
   ComplementaryEducation: Record<string, AcademicItemObject>[] = [
     {
       'pt-BR': {
+        title: 'Microsoft Power BI Desktop for Business Intelligence ',
+        institute: 'Udemy',
+        instituteURL: 'https://www.udemy.com/',
+        description: 'O curso é projetado para ensinar os usuários a utilizar o Power BI Desktop de maneira eficiente para tarefas de inteligência de negócios. Ele abrange tópicos como conexão a diferentes fontes de dados, transformação e modelagem de dados, além de criação de relatórios visuais interativos. Também explora o DAX (Data Analysis Expressions) para análise de dados, o Power Query para transformação de dados e como publicar e compartilhar relatórios.',
+        startDate: 'Setembro/2024',
+        credential: 'https://ude.my/UC-5ce4177b-3d65-4c59-bbdc-39bc7ef19bfc',
+        hours: 16
+      },
+      'en-US': {
+        title: 'Microsoft Power BI Desktop for Business Intelligence ',
+        institute: 'Udemy',
+        instituteURL: 'https://www.udemy.com/',
+        description: 'The course is designed to teach users how to efficiently use Power BI Desktop for business intelligence tasks. It covers topics like connecting to different data sources, transforming and modeling data, and creating interactive visual reports. It also explores DAX (Data Analysis Expressions) for data analysis, Power Query for data transformation, and how to publish and share reports.',
+        startDate: 'September/2024',
+        credential: 'https://ude.my/UC-5ce4177b-3d65-4c59-bbdc-39bc7ef19bfc',
+        hours: 16
+      }
+    },
+    {
+      'pt-BR': {
         title: 'Cybersecurity Fundamentals ',
         institute: 'IBM-SkillsBuild',
         instituteURL: 'https://skillsbuild.org/',
