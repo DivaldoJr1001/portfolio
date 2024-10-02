@@ -74,10 +74,32 @@ export class ComplementaryEducationComponent extends HistoryPageComponent {
     },
     {
       'pt-BR': {
+        title: 'Práticas de Cloud Services usando Swift com ênfase em IoT',
+        institute: 'HackaTruck MakerSpace',
+        instituteURL: 'https://hackatruck.com.br/',
+        description: 'Continuação prática do curso "Conceitos e Fundamentos: Lógica de Programação, Orientação a Objetos, Swift, JavaScript e RESTful API", requerindo o desenvolvimento de um aplicativo iOS por meio de Xcode para conclusão.',
+        startDate: 'Maio/2019',
+        endDate: 'Junho/2019',
+        credential: 'https://imgur.com/a/Q2CQbLV',
+        hours: 100
+      },
+      'en-US': {
+        title: 'Concepts and Fundamentals: Programming Logic, Object-Oriented Programming, Swift, JavaScript and RESTful API',
+        institute: 'HackaTruck MakerSpace',
+        instituteURL: 'https://hackatruck.com.br/',
+        description: 'Practical continuation of the course "Concepts and Fundamentals: Programming Logic, Object-Oriented Programming, Swift, JavaScript and RESTful API," requiring the development of an iOS application through Xcode for completion.',
+        startDate: 'May/2019',
+        endDate: 'June/2019',
+        credential: 'https://imgur.com/a/Q2CQbLV',
+        hours: 100
+      }
+    },
+    {
+      'pt-BR': {
         title: 'Conceitos e Fundamentos: Lógica de Programação, Orientação a Objetos, Swift, JavaScript e RESTful API',
         institute: 'HackaTruck MakerSpace',
         instituteURL: 'https://hackatruck.com.br/',
-        description: 'Curso voltado ao ensino de fundamentos de desenvolvimento de aplicativos iOS, requerindo o desenvolvimento de um aplicativo por meio de Xcode para conclusão.',
+        description: 'Curso voltado ao ensino de fundamentos de desenvolvimento de aplicativos iOS.',
         startDate: 'Março/2019',
         endDate: 'Abril/2019',
         credential: 'https://imgur.com/a/vCamw5h',
@@ -87,7 +109,7 @@ export class ComplementaryEducationComponent extends HistoryPageComponent {
         title: 'Concepts and Fundamentals: Programming Logic, Object-Oriented Programming, Swift, JavaScript and RESTful API',
         institute: 'HackaTruck MakerSpace',
         instituteURL: 'https://hackatruck.com.br/',
-        description: 'Course aimed at teaching the fundamentals of iOS application development, requiring the development of an application through Xcode for completion.',
+        description: 'Course aimed at teaching the fundamentals of iOS application development.',
         startDate: 'March/2019',
         endDate: 'April/2019',
         credential: 'https://imgur.com/a/vCamw5h',
