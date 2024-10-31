@@ -14,10 +14,27 @@ export class CareerHistoryComponent extends HistoryPageComponent {
   workHistory: Record<string, WorkItemObject>[] = [
     {
       'pt-BR': {
+        title: 'Estagiário de Dados',
+        company: 'StarPrint',
+        companyURL: 'https://www.starprinton.com.br/',
+        startDate: 'Outubro/2024',
+        description: 'Análise, inserção, formatação e organização de dados operacionais do negócio, além de manutenção e melhorias de processos relacionados.'
+      },
+      'en-US': {
+        title: 'Data Intern',
+        company: 'StarPrint',
+        companyURL: 'https://www.starprinton.com.br/',
+        startDate: 'October/2024',
+        description: 'Analysis, insertion, formatting and organization of business operational data, as well as maintenance and improvements of related processes.'
+      }
+    },
+    {
+      'pt-BR': {
         title: 'Desenvolvedor Web Full Stack Freelance',
         company: 'Azulejus',
         companyURL: 'https://azulejus.pt/',
         startDate: 'Julho/2023',
+        endDate: 'Setembro/2024',
         description: 'Desenvolvi e mantive uma aplicação web de gerenciamento de vendas, clientes e estoque, utilizando Angular, NestJS, Mongoose e MongoDB, o que resultou em uma melhoria significante na eficiência operacional do negócio.'
       },
       'en-US': {
@@ -25,6 +42,7 @@ export class CareerHistoryComponent extends HistoryPageComponent {
         company: 'Azulejus',
         companyURL: 'https://azulejus.pt/',
         startDate: 'July/2023',
+        endDate: 'September/2024',
         description: 'Developed and maintained a web application for managing sales, customers, and inventory, using Angular, NestJS, Mongoose, and MongoDB, resulting in a significant improvement in operational efficiency.'
       }
     },
