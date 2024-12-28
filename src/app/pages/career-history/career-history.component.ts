@@ -18,14 +18,14 @@ export class CareerHistoryComponent extends HistoryPageComponent {
         company: 'StarPrint',
         companyURL: 'https://www.starprinton.com.br/',
         startDate: 'Outubro/2024',
-        description: 'Análise, inserção, formatação e organização de dados operacionais do negócio, além de manutenção e melhorias de processos relacionados.'
+        description: 'Realizo análises e organização de dados operacionais do negócio, garantindo precisão e consistência nas informações. Sou responsável por inserir, formatar e estruturar dados, além de identificar e implementar melhorias em processos operacionais, contribuindo para a eficiência e tomada de decisão da empresa.'
       },
       'en-US': {
         title: 'Data Intern',
         company: 'StarPrint',
         companyURL: 'https://www.starprinton.com.br/',
         startDate: 'October/2024',
-        description: 'Analysis, insertion, formatting and organization of business operational data, as well as maintenance and improvements of related processes.'
+        description: 'I perform analysis and organization of operational business data, ensuring accuracy and consistency of information. I am responsible for inserting, formatting, and structuring data, as well as identifying and implementing improvements in operational processes, contributing to the company\'s efficiency and decision-making.'
       }
     },
     {
@@ -35,7 +35,7 @@ export class CareerHistoryComponent extends HistoryPageComponent {
         companyURL: 'https://azulejus.pt/',
         startDate: 'Julho/2023',
         endDate: 'Setembro/2024',
-        description: 'Desenvolvi e mantive uma aplicação web de gerenciamento de vendas, clientes e estoque, utilizando Angular, NestJS, Mongoose e MongoDB, o que resultou em uma melhoria significante na eficiência operacional do negócio.'
+        description: 'Desenvolvi e mantive uma aplicação web para gerenciamento de vendas, clientes e estoque, utilizando Angular, NestJS, Mongoose e MongoDB. A solução implementada otimizou significativamente a eficiência operacional do negócio, garantindo um fluxo de trabalho mais ágil e confiável.'
       },
       'en-US': {
         title: 'Freelance Full Stack Web Developer',
@@ -43,7 +43,7 @@ export class CareerHistoryComponent extends HistoryPageComponent {
         companyURL: 'https://azulejus.pt/',
         startDate: 'July/2023',
         endDate: 'September/2024',
-        description: 'Developed and maintained a web application for managing sales, customers, and inventory, using Angular, NestJS, Mongoose, and MongoDB, resulting in a significant improvement in operational efficiency.'
+        description: 'Developed and maintained a web application for managing sales, customers, and inventory, leveraging Angular, NestJS, Mongoose, and MongoDB. The implemented solution significantly optimized the business\'s operational efficiency, ensuring a more agile and reliable workflow.'
       }
     },
     {
@@ -53,7 +53,7 @@ export class CareerHistoryComponent extends HistoryPageComponent {
         companyURL: 'https://www.pathfind.com.br/',
         startDate: 'Julho/2019',
         endDate: 'Abril/2023',
-        description: 'Conduzi o desenvolvimento front-end de uma aplicação web desktop em Angular, criando interfaces de usuário seguindo estritamente os designs pré-definidos. Colaborei na integração do front-end com APIs back-end e implementei testes unitários que aumentaram a estabilidade e confiabilidade do sistema.'
+        description: 'Liderei o desenvolvimento front-end de uma aplicação web desktop em Angular, projetando interfaces de usuário que seguiam rigorosamente os designs pré-definidos. Colaborei na integração com APIs back-end e implementei testes unitários que aprimoraram a estabilidade e a confiabilidade do sistema.'
       },
       'en-US': {
         title: 'Front-End Web Developer',
@@ -61,7 +61,7 @@ export class CareerHistoryComponent extends HistoryPageComponent {
         companyURL: 'https://www.pathfind.com.br/',
         startDate: 'July/2019',
         endDate: 'April/2023',
-        description: 'Led the front-end development of a desktop web application using Angular, creating user interfaces that strictly followed predefined designs. Collaborated on the integration of front-end with back-end APIs and implemented unit tests that enhanced the stability and reliability of the system.'
+        description: 'Led the front-end development of a desktop web application using Angular, designing user interfaces that strictly adhered to predefined designs. Collaborated on API integrations and implemented unit tests, enhancing the system\'s stability and reliability.'
       }
     }
   ];
