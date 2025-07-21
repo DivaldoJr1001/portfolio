@@ -34,7 +34,7 @@ export class CareerHistoryComponent extends HistoryPageComponent {
         company: 'Azulejus',
         companyURL: 'https://azulejus.pt/',
         startDate: 'Julho/2023',
-        endDate: 'Setembro/2024',
+        endDate: 'Julho/2025',
         description: 'Desenvolvi e mantive uma aplicação web para gerenciamento de vendas, clientes e estoque, utilizando Angular, NestJS, Mongoose e MongoDB. A solução implementada otimizou significativamente a eficiência operacional do negócio, garantindo um fluxo de trabalho mais ágil e confiável.'
       },
       'en-US': {
@@ -42,7 +42,7 @@ export class CareerHistoryComponent extends HistoryPageComponent {
         company: 'Azulejus',
         companyURL: 'https://azulejus.pt/',
         startDate: 'July/2023',
-        endDate: 'September/2024',
+        endDate: 'July/2025',
         description: 'Developed and maintained a web application for managing sales, customers, and inventory, leveraging Angular, NestJS, Mongoose, and MongoDB. The implemented solution significantly optimized the business\'s operational efficiency, ensuring a more agile and reliable workflow.'
       }
     },
