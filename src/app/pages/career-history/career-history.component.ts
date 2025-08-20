@@ -13,11 +13,28 @@ export class CareerHistoryComponent extends HistoryPageComponent {
 
   workHistory: Record<string, WorkItemObject>[] = [
     {
+      "pt-BR": {
+        "title": "Desenvolvedor de Dados",
+        "company": "StarPrint",
+        "companyURL": "https://www.starprinton.com.br/",
+        "startDate": "Agosto/2025",
+        "description": "Atuo no desenvolvimento e manutenção de soluções voltadas para a gestão de dados da empresa, evoluindo além das tarefas operacionais do estágio. Sou responsável por estruturar pipelines de dados, automatizar processos de coleta, tratamento e integração, além de implementar rotinas que garantem qualidade, consistência e escalabilidade das informações. Também participo ativamente na modelagem de dados e na criação de relatórios analíticos que apoiam as áreas de negócio em tomadas de decisão estratégicas."
+      },
+      "en-US": {
+        "title": "Data Developer",
+        "company": "StarPrint",
+        "companyURL": "https://www.starprinton.com.br/",
+        "startDate": "August/2025",
+        "description": "I work on developing and maintaining solutions for the company’s data management, evolving beyond the operational tasks performed during my internship. I am responsible for structuring data pipelines, automating processes for data collection, cleaning, and integration, as well as implementing routines that ensure quality, consistency, and scalability of information. I also take an active role in data modeling and in creating analytical reports that support business areas in strategic decision-making."
+      }
+    },
+    {
       'pt-BR': {
         title: 'Estagiário de Dados',
         company: 'StarPrint',
         companyURL: 'https://www.starprinton.com.br/',
         startDate: 'Outubro/2024',
+        endDate: 'Agosto/2025',
         description: 'Realizo análises e organização de dados operacionais do negócio, garantindo precisão e consistência nas informações. Sou responsável por inserir, formatar e estruturar dados, além de identificar e implementar melhorias em processos operacionais, contribuindo para a eficiência e tomada de decisão da empresa.'
       },
       'en-US': {
@@ -25,6 +42,7 @@ export class CareerHistoryComponent extends HistoryPageComponent {
         company: 'StarPrint',
         companyURL: 'https://www.starprinton.com.br/',
         startDate: 'October/2024',
+        endDate: 'August/2025',
         description: 'I perform analysis and organization of operational business data, ensuring accuracy and consistency of information. I am responsible for inserting, formatting, and structuring data, as well as identifying and implementing improvements in operational processes, contributing to the company\'s efficiency and decision-making.'
       }
     },
