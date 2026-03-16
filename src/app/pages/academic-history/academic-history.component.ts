@@ -19,7 +19,7 @@ export class AcademicHistoryComponent extends HistoryPageComponent {
         instituteURL: 'https://unifor.br/',
         description: 'Curso para formação de profissionais qualificados para realizar projetos de desenvolvimento e administração de soluções de Ciências de Dados trabalhando com tecnologias que permitam operar grandes volumes de dados processados.',
         startDate: 'Abril/2024',
-        endDate: 'Fevereiro/2026 (Cursando)'
+        endDate: 'Fevereiro/2026'
       },
       'en-US': {
         title: 'MBA in Data Science',
@@ -27,7 +27,7 @@ export class AcademicHistoryComponent extends HistoryPageComponent {
         instituteURL: 'https://unifor.br/',
         description: 'Course to train qualified professionals to carry out projects to develop and manage Data Science solutions, working with technologies that allow the operation of large volumes of processed data.',
         startDate: 'April/2024',
-        endDate: 'February/2026 (In progress)'
+        endDate: 'February/2026'
       }
     },
     {
